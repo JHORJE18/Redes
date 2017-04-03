@@ -104,13 +104,13 @@
             <?php
 
             //Obtiene numero de redes sociales
-            $total = "SELECT * FROM `redes` ORDER BY `redes`.`ID-RED` ASC";
+            $total = "SELECT * FROM `redes` ORDER BY `ID-RED` ASC";
             if ($resultado = $conexion -> query($total)){
                 $totalREDES = $resultado -> num_rows;
             }
-            echo 'Voy a empezar a entrar al bucle';
+            echo $totalREDES;
             for ($i=0; $i<$totalREDES; $i++){
-                $consultaRED = "SELECT * FROM `redes` ORDER BY `redes`.`ID-RED` ASC";
+                $consultaRED = "SELECT * FROM `redes` ORDER BY `ID-RED` ASC";
                 if ($resultadoRED = $conexion -> query($consultaRED)){
                     $redID = $resultadoRED->fetch_array(); 
                     echo '<div class="mdl-cell mdl-cell--4-col">
