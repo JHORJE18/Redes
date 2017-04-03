@@ -1,17 +1,23 @@
 <?php
 include 'conexion.php';
 
-      if (isset($_SESSION['usuario'])) {
+      if (isset($_SESSION['ID'])) {
           //Sesion Abierta
-          $usuario = $_SESSION['usuario'];
+          $usuidUsuarioario = $_SESSION['ID'];
 
                 //Obten imagen
-                $consultaFoto = ("SELECT FOTO FROM  `usuarios` WHERE  `USUARIO` =  '$usuario'");
+                $consultaFoto = ("SELECT * FROM  `usuario` WHERE  `ID` =  '$idUsuario'");
                 $resultadoFoto = $conexion -> query($consultaFoto);
 
                     $perfilUserOTO = $resultadoFoto->fetch_array();
 
-          $imagenUsuario = $perfilUserOTO[0];
+          $nombre = $perfilUserOTO[1];
+          $apedillo = $perfilUserOTO[2];
+          if ($perfilUserOTO[5] != null){
+            $imagenUsuario = $perfilUserOTO[5];
+          } else {
+            $imagenUsuario = "imagenes/user.jpg";
+          }
       }   else {
           $usuario = "Invitado";
           $apedillo = "Anónimo";
