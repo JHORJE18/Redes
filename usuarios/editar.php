@@ -86,7 +86,7 @@
     </div>
     <br>
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-        <input name="foto" class="mdl-textfield__input" type="text" id="foto" value="<?php echo $perfilUser[6] ?>">
+        <input name="foto" class="mdl-textfield__input" type="text" id="foto" value="<?php echo $perfilUser[5] ?>">
         <label class="mdl-textfield__label" for="foto">Foto perfil</label>
     </div>
     <hr>
