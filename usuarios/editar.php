@@ -77,6 +77,11 @@
 
     <h3>Editar campos</h3>
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <input name="email" class="mdl-textfield__input" type="email" id="email" value="<?php echo $perfilUser[3] ?>" disabled>
+        <label class="mdl-textfield__label" for="email">Correo electrónico</label>
+    </div>
+    <br>
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
         <input name="nombre" class="mdl-textfield__input" type="text" id="nombre" value="<?php echo $perfilUser[2] ?>">
         <label class="mdl-textfield__label" for="nombre">Nombre</label>
     </div>
