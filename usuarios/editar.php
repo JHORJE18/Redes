@@ -95,10 +95,39 @@
         <label class="mdl-textfield__label" for="foto">Foto perfil</label>
     </div>
     <hr>
-    <h3>Redes Sociales</h3>
+
+      <div class="mdl-cell mdl-cell--12-col">
+        <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--12-col mdl-button mdl-js-button mdl-button--raised">
+              <i class="material-icons">bookmark</i> Redes Sociales
+            </div>
+            <?php
+
+            //Obtiene numero de redes sociales
+            $total = "SELECT * FROM `redes` ORDER BY `redes`.`ID-RED` ASC";
+            if ($resultado = $conexion -> query($total)){
+                $totalREDES = $resultado -> num_rows;
+            }
+
+            for ($i=0; $i<$totalREDES; $i++){
+                $consultaRED = "SELECT * FROM `redes` ORDER BY `redes`.`ID-RED` ASC";
+                if ($resultadoRED = $conexion -> query($consultaRED)){
+                    $redID = $resultadoRED ->fetch_array();
+                    echo '<div class="mdl-cell mdl-cell--4-col">
+                            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tipo1">
+                                <input type="radio" id="tipo1" class="mdl-radio__button" name="tipo" value="'.$resultadoRED[0].'">
+                                <span class="mdl-radio__label">'.$resultadoRED[1].'</span>
+                            </label>
+                        </div>';
+                }
+            }
+            ?>
+        </div>
+      </div>
+
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-        <input name="facebook" class="mdl-textfield__input" type="text" id="facebook" value="<?php echo $red[1] ?>">
-        <label class="mdl-textfield__label" for="facebook">Perfil Facebook</label>
+        <input name="link" class="mdl-textfield__input" type="text" id="link">
+        <label class="mdl-textfield__label" for="link">Link Perfil</label>
     </div>
     <hr>
     <div>
