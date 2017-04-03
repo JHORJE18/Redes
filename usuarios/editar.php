@@ -116,8 +116,8 @@
                 }
                     echo '<div class="mdl-cell mdl-cell--4-col">
                             <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tipo1">
-                                <input type="radio" id="tipo1" class="mdl-radio__button" name="tipo" value="'.$resultadoRED[0].'">
-                                <span class="mdl-radio__label">'.$resultadoRED[1].'</span>
+                                <input type="radio" id="tipo1" class="mdl-radio__button" name="tipo" value="'.$redID[0].'">
+                                <span class="mdl-radio__label">'.$redID[1].'</span>
                             </label>
                         </div>';
             }
