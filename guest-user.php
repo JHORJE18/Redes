@@ -110,7 +110,7 @@ if(isset($_POST["registrar"])){
                  //Email information
                 $email = $correo;
                 $admin_email = "wiijlg@hotmail.com";
-                $subject = "Soporte YT Subs | Registrado";
+                $subject = "Central Redes Sociales | Registrado";
                 $separa = "\n--------------------------------------------------\n";
                 $datos = "Ya estas registrado!\nUsuario: ".$usuario."\nCorreo: ".$correo."\nContraseña: ".$contrasena;
 
@@ -122,29 +122,19 @@ if(isset($_POST["registrar"])){
 
         } else {    //No se puede insertar
          //Es por el USUARIO??
-                $consultaUSUARIO = "SELECT USUARIO FROM usuarios WHERE USUARIO='$usuario'";
+                $consultaUSUARIO = "SELECT * FROM usuarios WHERE CORREO='$correo'";
                 if ($resultado = $conexion -> query($consultaUSUARIO)){
                     //Determinamos numero tablas
                      $consultaUsuarios = $resultado -> num_rows;
                 }
             if ($consultaUsuarios != 0){
-                $mensaje = "El usuario ya esta registrado";
+                $mensaje = "El correo ya esta registrado";
                 }   else    {
-                //Es por el Correo??
-                $consultaCORREO = "SELECT CORREO FROM usuarios WHERE CORREO='$email'";
-                if ($resultado = $conexion -> query($consultaCORREO)){
-                    //Determinamos numero tablas
-                     $consultaCorreos = $resultado -> num_rows;
-                }
-                if ($consultaCorreos != 0){
-                    $mensaje = "El correo ya ha sido registrado";
-                }   else    {
-                    $mensaje = "Error desconocido ".$sql ;
-                }
+                $mensaje = "Error desconocido ".$sql ;
             }
-    }  
+        }  
         } else {
-             $mensaje = "Todos los campos no deben de estar vacios!";
+             $mensaje = "Tienes que rellenar todos los datos!";
         }
       } else {
         $mensaje = "La contraseña para registrarse no coincide";
