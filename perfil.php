@@ -71,7 +71,25 @@
               <span>Correo: <?php echo $perfilUser[3] ?></span><br>
               <span>Fecha registro: <?php echo $perfilUser[6] ?></span><br>
 
-         <?php   }
+              <hr>
+              <h2>Redes Sociales</h2>
+              
+              <?php
+              //Mira si tiene alguna red social
+              $cuantasCNX = "SELECT * FROM conexiones WHERE `ID-USUARIO`= '$perfilUser[0]'";
+              if ($resultado = $conexion -> query($cuantasCNX)){
+                $numCNX = $resultado -> num_rows;
+              }
+
+              if ($numCNX != null){
+                for ($i=0; $i<$numCNX; $i++){
+                  //Muestra cada Red Social que tiene registrada
+                  $red = "SELECT * FROM conexiones WHERE `ID-USUARIO`= '$perfilUser[0]' ORDER BY ASC LIMIT ".$i.", 1";
+                }
+              } else {
+                echo '<span>Este usuario aún no ha registrado ninguna Red Social :(</span>';
+              }
+            }
 
             echo '</div>';
               ?>
