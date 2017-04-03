@@ -32,7 +32,7 @@ if(isset($_POST["iniciar"])){
                 //Obten ID del usuario actual
                 $infoUSER = $resultado -> fetch_array();
                 session_start();
-                $_SESSION['ID']=$infoUSER[0];
+                $_SESSION['ID'] = $infoUSER[0];
                 header("Location: index.php");
             }   else    {
                 $mensaje = "La contraseña introducida es incorrecta";

@@ -1,13 +1,13 @@
 <!doctype html>
 <html lang="es">
   <head>
-    <?php include './Plantilla/cabezera.php';
+    <?php include './plantilla/cabezera.php';
           include './conexion.php';
 
     if ($_GET['user'] !=  null){
       //Quiere ver a un usuario
       $usuarioVER = $_GET['user'];
-    } else if (isset($_SESSION['ID'])){
+    } else if ($_SESSION['ID'] != null){
       $usuarioVER = $_SESSION['ID'];
     } 
 
@@ -39,8 +39,8 @@
   <body>
     <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
       <?php
-        include './Plantilla/cabezera-body.php';
-        include './Plantilla/menu-lateral.php';
+        include './plantilla/cabezera-body.php';
+        include './plantilla/menu-lateral.php';
        ?>
       <main class="mdl-layout__content mdl-color--grey-100">
 
