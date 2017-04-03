@@ -86,7 +86,7 @@ if(isset($_POST["registrar"])){
   //Si la contraseña y la confirmar contraseña coinciden continua
   if (($_POST['password']) == ($_POST['passwordC'])) {
 
-    if(!empty($_POST['email']) && !empty($_POST['nombre']) && !empty($_POST['apedillo'])) {
+    if(!empty($_POST['email']) && !empty($_POST['nombre']) && !empty($_POST['apedillos'])) {
         //Procesar valores
         $correo = $_POST['email'];
         $nombre = $_POST['nombre'];
