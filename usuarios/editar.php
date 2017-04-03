@@ -108,11 +108,11 @@
             if ($resultado = $conexion -> query($total)){
                 $totalREDES = $resultado -> num_rows;
             }
-
+            echo 'Voy a empezar a entrar al bucle';
             for ($i=0; $i<$totalREDES; $i++){
                 $consultaRED = "SELECT * FROM `redes` ORDER BY `redes`.`ID-RED` ASC";
                 if ($resultadoRED = $conexion -> query($consultaRED)){
-                    $redID = $resultadoRED ->fetch_array();
+                    $redID = $resultadoRED->fetch_array(); 
                     echo '<div class="mdl-cell mdl-cell--4-col">
                             <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tipo1">
                                 <input type="radio" id="tipo1" class="mdl-radio__button" name="tipo" value="'.$resultadoRED[0].'">
