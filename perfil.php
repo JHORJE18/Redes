@@ -20,6 +20,7 @@
 
     //Obten datos usuario
             $consuta = ("SELECT * FROM  `usuario` WHERE  `ID` =  '$usuarioVER'");
+            echo $consuta;
             $resultado = $conexion -> query($consuta);
 
                 $perfilUser = $resultado->fetch_array();
