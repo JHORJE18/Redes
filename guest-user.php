@@ -143,13 +143,13 @@ if(isset($_POST["registrar"])){
                 }
             }
     }  
-}  
         } else {
              $mensaje = "Todos los campos no deben de estar vacios!";
         }
       } else {
         $mensaje = "La contraseña para registrarse no coincide";
       }
+}
 ?>
 
     <div class="mdl-grid">
