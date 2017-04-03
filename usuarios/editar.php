@@ -53,9 +53,17 @@
             $idRED = $_REQUEST['red'];
             $link = $_REQUEST['link'];
 
-            echo 'Se ha obtenido la red '.$idRED;
             if ($link != null){
                 $sql = "UPDATE conexion SET `LINK-PERFIL` = '$link' WHERE `ID-RED`= '$idRED' AND `ID-USUARIO`= '$perfilUser[0]'";
+
+                //Introducir datos en BBDD
+                $result= $conexion -> query($sql);
+
+                    if($result){
+                        $mensaje = $mensaje."La Red ha sido cambiado correctamente <br>";
+                    }   else {
+                        $mensaje = $mensaje."La Red no se ha podido cambiar correctamente <br>";
+                    }
             } else {
                 $mensaje = $mensaje."No se ha introducido el link de la Red Social que quieres cambiar <br>";
             }
