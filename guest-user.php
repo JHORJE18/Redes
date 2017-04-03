@@ -86,46 +86,19 @@ if(isset($_POST["registrar"])){
   //Si la contraseña y la confirmar contraseña coinciden continua
   if (($_POST['password']) == ($_POST['passwordC'])) {
 
-    if(!empty($_POST['usuario']) && !empty($_POST['email']) && !empty($_POST['link']) && !empty($_POST['video']) && !empty($_POST['password']) ) {
+    if(!empty($_POST['email']) && !empty($_POST['nombre']) && !empty($_POST['apedillo'])) {
         //Procesar valores
-        $usuario = $_POST['usuario'];
         $correo = $_POST['email'];
-        $link = $_POST['link'];
-        $video = $_POST['video'];
+        $nombre = $_POST['nombre'];
+        $apedillos = $_POST['apedillos'];
         $contrasena = $_POST['password'];
         $fecha = date("Y-m-d");
-
-        //Obtiene imagen
-        //Sacamos canal ID
-        $division = explode("/", $link);
-        $canalID = $division[4];
-
-        $apiG = "SELECT * FROM `GoogleAPI` ORDER BY `GoogleAPI`.`ID` DESC";
-        if ($resultado_API = $conexion -> query($apiG)){
-            $obj = $resultado_API->fetch_array();          //Mete los valores en el array $fila[]
-            $llave = $obj[1];
-        }
-
-$api = file_get_contents('https://www.googleapis.com/youtube/v3/channels?part=snippet&id='.$canalID.'&key='.$llave.'');
-$resultado = json_decode($api, true);
-$imagen = ($resultado['items'][0]['snippet']['thumbnails']["high"]['url']);
-if ($imagen == null){
-    $mensaje = "El link del canal no es valido";
-}   else {
-
-//Vamos a comprobar si el video es valido
-$divisionVideo = explode("/", $_POST['video']);
-$linkVideoFORMATEADO = $divisionVideo[3];
-
-if (substr_count($linkVideoFORMATEADO, "&") != 0){
-    $mensaje = "El link del video no es valido";
-}   else {
     
         //Convertir valores
         $correo = strtolower ( $correo ); //AUTOMATICAMENTE MINUSCULAS
 
             //Datos que enviara a la BBDD
-           $sql = "INSERT INTO usuarios (USUARIO, CORREO, CONTRASENA, LINK, FOTO, VIDEO, FECHA)  VALUES('$usuario', '$correo', '$contrasena', '$link', '$imagen', '$video', '$fecha')";
+           $sql = "INSERT INTO usuarios (NOMBRE, APEDILLOS, CORREO, CONTRASENA, FECHA)  VALUES('$nombre', '$apedillos', '$correo', '$contrasena', '$fecha')";
 
             //Introducir datos en BBDD
            $result= $conexion -> query($sql);
@@ -169,7 +142,6 @@ if (substr_count($linkVideoFORMATEADO, "&") != 0){
                     $mensaje = "Error desconocido ".$sql ;
                 }
             }
-        }
     }  
 }  
         } else {
@@ -220,7 +192,7 @@ if (substr_count($linkVideoFORMATEADO, "&") != 0){
 
                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-textfield--floating-label">
                       <input name="email" class="mdl-textfield__input" type="email" id="email">
-                      <label class="mdl-textfield__label" for="password">Correo electronico</label>
+                      <label class="mdl-textfield__label" for="email">Correo electronico</label>
                 </div>
                 <br>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-textfield--floating-label">
