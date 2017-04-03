@@ -3,10 +3,10 @@ include 'conexion.php';
 
       if (isset($_SESSION['ID'])) {
           //Sesion Abierta
-          $usuidUsuarioario = $_SESSION['ID'];
+          $idUsuario = $_SESSION['ID'];
 
                 //Obten imagen
-                $consultaFoto = ("SELECT * FROM  `usuario` WHERE  `ID` =  '$idUsuario'");
+                $consultaFoto = ("SELECT * FROM  `usuario` WHERE  `ID` = '$idUsuario'");
                 $resultadoFoto = $conexion -> query($consultaFoto);
 
                     $perfilUserOTO = $resultadoFoto->fetch_array();
