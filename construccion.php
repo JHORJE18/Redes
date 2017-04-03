@@ -4,7 +4,7 @@
     <?php include './Plantilla/cabezera.php';
     $seccion = "Zona en construcción"?>
 
-    <title>Vota | Zona en construcción</title>
+    <title>Central Redes Sociales | Zona en construcción</title>
   </head>
   <body>
     <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
