@@ -76,7 +76,7 @@
               
               <?php
               //Mira si tiene alguna red social
-              $cuantasCNX = "SELECT * FROM conexiones WHERE `ID-USUARIO`= '$perfilUser[0]'";
+              $cuantasCNX = "SELECT * FROM conexion WHERE `ID-USUARIO`= '$perfilUser[0]'";
               if ($resultado = $conexion -> query($cuantasCNX)){
                 $numCNX = $resultado -> num_rows;
               }
@@ -84,7 +84,7 @@
               if ($numCNX != null){
                 for ($i=0; $i<$numCNX; $i++){
                   //Muestra cada Red Social que tiene registrada
-                  $red = "SELECT * FROM conexiones WHERE `ID-USUARIO`= '$perfilUser[0]' ORDER BY ASC LIMIT ".$i.", 1";
+                  $red = "SELECT * FROM conexion WHERE `ID-USUARIO`= '$perfilUser[0]' ORDER BY ASC LIMIT ".$i.", 1";
                 }
               } else {
                 echo '<span>Este usuario aún no ha registrado ninguna Red Social :(</span>';
