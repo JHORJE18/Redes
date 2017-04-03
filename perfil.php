@@ -30,11 +30,12 @@
                 $perfilUser[5] = "images/user.jpg";
               }
 
-
-          $seccion = $usuarioVER;
+        //Generamos nombre completo
+        $usuarioCOMPLETO = $perfilUser[1].', '.$perfilUser[2];
+          $seccion = $usuarioCOMPLETO;
     ?>
 
-    <title>Vota | <?php echo $seccion; ?></title>
+    <title>Central Redes Sociales | <?php echo $seccion; ?></title>
   </head>
   <body>
     <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
