@@ -98,7 +98,7 @@ if(isset($_POST["registrar"])){
         $correo = strtolower ( $correo ); //AUTOMATICAMENTE MINUSCULAS
 
             //Datos que enviara a la BBDD
-           $sql = "INSERT INTO usuarios (NOMBRE, APEDILLOS, CORREO, CONTRASENA, FECHA)  VALUES('$nombre', '$apedillos', '$correo', '$contrasena', '$fecha')";
+           $sql = "INSERT INTO usuario (NOMBRE, APEDILLOS, CORREO, CONTRASENA, FECHA)  VALUES('$nombre', '$apedillos', '$correo', '$contrasena', '$fecha')";
 
             //Introducir datos en BBDD
            $result= $conexion -> query($sql);
@@ -122,7 +122,7 @@ if(isset($_POST["registrar"])){
 
         } else {    //No se puede insertar
          //Es por el USUARIO??
-                $consultaUSUARIO = "SELECT * FROM usuarios WHERE CORREO='$correo'";
+                $consultaUSUARIO = "SELECT * FROM usuario WHERE CORREO='$correo'";
                 if ($resultado = $conexion -> query($consultaUSUARIO)){
                     //Determinamos numero tablas
                      $consultaUsuarios = $resultado -> num_rows;
