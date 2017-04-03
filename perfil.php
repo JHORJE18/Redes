@@ -87,7 +87,7 @@
                   $red = "SELECT conexion.`LINK-PERFIL`, redes.NOMBRE  FROM conexion INNER JOIN redes WHERE `ID-USUARIO`= '$perfilUser[0]' ORDER BY `ID-USUARIO` ASC LIMIT ".$i.", 1";
                   echo $red;
                   if ($resultado = $conexion -> query($red)){
-                    $valores = $resultado ->fetch_array();
+                    $valores = $resultado -> fetch_array();
                     echo '<a href="'.$valores[0].'" target="_blank"><div class="mdl-button mdl-js-button mdl-button--accent mdl-js-ripple-effect"><i class="material-icons">arrow_forward</i> '.$red[1].'</div></a>';
                   }
                 }
