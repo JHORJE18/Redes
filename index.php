@@ -21,13 +21,13 @@
 
     $seccion = "Inicio" ?>
 
-    <title>YT Subs | <?php echo $seccion; ?></title>
+    <title>Central Redes Socialess | <?php echo $seccion; ?></title>
   </head>
   <body>
     <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
       <?php
-        include './plantilla/cabezera-body.php';
-        include './plantilla/menu-lateral.php';
+        include 'plantilla/cabezera-body.php';
+        include 'plantilla/menu-lateral.php';
        ?>
       <main class="mdl-layout__content mdl-color--grey-100">
 
@@ -40,7 +40,7 @@
 
           <div class="mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col">
             <div class="mdl-grid">
-              <?php include './plantilla/bienvenido.php';?>
+              <?php include 'plantilla/bienvenido.php';?>
             </div>
           </div>
 
