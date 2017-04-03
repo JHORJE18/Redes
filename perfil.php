@@ -66,10 +66,10 @@
             } else {
               //Mostrar panel de usuarios ?>
 
-              <span>Nombre: <?php echo $perfilUser[1] ?></span>
-              <span>Apedillos: <?php echo $perfilUser[2] ?></span>
-              <span>Correo: <?php echo $perfilUser[3] ?></span>
-              <span>Fecha registro: <?php echo $perfilUser[6] ?></span>
+              <span>Nombre: <?php echo $perfilUser[1] ?></span><br>
+              <span>Apedillos: <?php echo $perfilUser[2] ?></span><br>
+              <span>Correo: <?php echo $perfilUser[3] ?></span><br>
+              <span>Fecha registro: <?php echo $perfilUser[6] ?></span><br>
 
          <?php   }
 
