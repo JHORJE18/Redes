@@ -14,24 +14,26 @@ if(isset($_POST["iniciar"])){
     $correo=$_POST['correo'];
     $password=$_POST['password'];
 
-    //CONSULTA USUARIO
-    $consultaUSUARIO = "SELECT * FROM usuarios WHERE CORREO='$correo'";
-        if ($resultado = $conexion -> query($consultaUSUARIO)){
+    //CONSULTA CORREO
+    $consultaCORREO = "SELECT * FROM usuario WHERE CORREO='$correo'";
+        if ($resultado = $conexion -> query($consultaCORREO)){
         //Determinamos numero tablas
          $usuarioN = $resultado -> num_rows;
         }
 
         if ($usuarioN > 0){     //Existe usuario
             //CONSULTA CONTRASEÑA
-            $consultaCONTRASENA = "SELECT * FROM usuarios WHERE USUARIO='$usuario' AND CONTRASENA='$password'";
+            $consultaCONTRASENA = "SELECT * FROM usuario WHERE CORREO='$correo' AND CONTRASENA='$password'";
                 if ($resultado = $conexion -> query($consultaCONTRASENA)){
                 //Determinamos numero tablas
                  $passwordN = $resultado -> num_rows;
                 }
             if ($passwordN > 0){
+                //Obten ID del usuario actual
+                $infoUSER = $resultado -> fetch_array();
                 session_start();
-                        $_SESSION['correo']=$correo;
-                        header("Location: index.php");
+                $_SESSION['ID']=$infoUSER[0];
+                header("Location: index.php");
             }   else    {
                 $mensaje = "La contraseña introducida es incorrecta";
             }
