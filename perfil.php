@@ -9,9 +9,7 @@
       $usuarioVER = $_GET['user'];
     } else if (isset($_SESSION['ID'])){
       $usuarioVER = $_SESSION['ID'];
-    } else {
-      header ('Location: index.php');
-    }
+    } 
 
     //Si el usuario quiere editar la pagina, muestrale lo administrativo, comprobanod que sea el mismo
     if (($_GET['edit'] != null) && ($usuarioVER = $_SESSION['ID'])){
