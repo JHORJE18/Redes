@@ -60,7 +60,7 @@
             <div class="mdl-grid">
               <?php
                   echo '<div class="mdl-cell mdl-cell--12-col">';
-                  echo '<h1>Perfil: '.$usuarioVER.'</h1>';
+                  echo '<h1>Perfil: '.$usuarioCOMPLETO.'</h1>';
                   echo "<hr>";
 
             //Mostrar panel de editor
@@ -69,10 +69,10 @@
             } else {
               //Mostrar panel de usuarios ?>
 
-              <h3>Nombre: <?php echo $perfilUser[2] ?></h3>
-              <h3>Apedillos: <?php echo $perfilUser[3] ?></h3>
-              <h3>Correo: <?php echo $perfilUser[4] ?></h3>
-              <h3>Fecha registro: <?php echo $perfilUser[7] ?></h3>
+              <h3>Nombre: <?php echo $perfilUser[1] ?></h3>
+              <h3>Apedillos: <?php echo $perfilUser[2] ?></h3>
+              <h3>Correo: <?php echo $perfilUser[2] ?></h3>
+              <h3>Fecha registro: <?php echo $perfilUser[6] ?></h3>
 
          <?php   }
 
