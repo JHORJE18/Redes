@@ -110,7 +110,7 @@
             }
             echo $totalREDES;
             for ($i=0; $i<$totalREDES; $i++){
-                $consultaRED = "SELECT * FROM `redes` ORDER BY `ID-RED` ASC";
+                $consultaRED = "SELECT * FROM `redes` ORDER BY `ID-RED` ASC LIMIT '.$i.', 1";
                 if ($resultadoRED = $conexion -> query($consultaRED)){
                     $redID = $resultadoRED->fetch_array(); 
                     echo '<div class="mdl-cell mdl-cell--4-col">
