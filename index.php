@@ -73,21 +73,6 @@
                     <a href="versiones.php"><div class=" mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored"><i class="material-icons">settings_backup_restore</i>Versión actual v <?php echo $versionULTIMA?></div></a>
               </center></div>
             </div>
-            <div class="demo-separator mdl-cell--1-col"></div>
-            <div class="mdl-shadow--4dp mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet mdl-cell--12-col-desktop mdl-color--white">
-              <div class="mdl-grid">
-                <!--ANUNCIO-->
-                    <script type="text/javascript">
-                      ( function() {
-                        if (window.CHITIKA === undefined) { window.CHITIKA = { 'units' : [] }; };
-                        var unit = {"calltype":"async[2]","publisher":"jhorje18","width":320,"height":50,"sid":"Chitika Default"};
-                        var placement_id = window.CHITIKA.units.length;
-                        window.CHITIKA.units.push(unit);
-                        document.write('<div id="chitikaAdBlock-' + placement_id + '"></div>');
-                    }());
-                    </script>
-                    <script type="text/javascript" src="//cdn.chitika.net/getads.js" async></script>
-              </div>
             </div>
           </div>
         </div>
