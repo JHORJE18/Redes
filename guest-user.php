@@ -38,7 +38,7 @@ if(isset($_POST["iniciar"])){
                 $mensaje = "La contraseña introducida es incorrecta";
             }
         }   else    {           //No existe usuario
-            $mensaje = "El usuario introducido no existe, registrate";
+            $mensaje = "El correo introducido no existe, registrate";
         }
 
     }   else    {
@@ -74,11 +74,11 @@ if (isset($_POST['recuperar'])){
 
 
         }   else  {
-            $mensaje = "Ponga su <strong>correo</strong> en el campo Usuario";
+            $mensaje = "Ponga su correo";
         }
     }   else {
         //No ha puesto nada en usuario
-        $mensaje = "Ponga su <strong>correo</strong> en el campo Usuario";
+        $mensaje = "Ponga su correo";
     }
 }
 

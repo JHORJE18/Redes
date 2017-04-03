@@ -19,7 +19,7 @@ include 'conexion.php';
             $imagenUsuario = "imagenes/user.jpg";
           }
       }   else {
-          $usuario = "Invitado";
+          $nombre = "Invitado";
           $apedillo = "Anónimo";
           $imagenUsuario = "imagenes/user.jpg";
       }
