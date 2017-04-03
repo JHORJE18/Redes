@@ -49,7 +49,7 @@
         }
 
         //Red Social
-        if ($_REQUEST['red'] != null){
+        if ($_REQUEST['red']){
             $idRED = $_REQUEST['red'];
             $link = $_REQUEST['link'];
 
