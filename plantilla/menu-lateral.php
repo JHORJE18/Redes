@@ -18,6 +18,7 @@ include 'conexion.php';
           } else {
             $imagenUsuario = "imagenes/user.jpg";
           }
+          echo $nombre.'<br>'.$apedillo.'<br>'.$imagenUsuario.'<br>';
       }   else {
           $usuario = "Invitado";
           $apedillo = "Anónimo";
