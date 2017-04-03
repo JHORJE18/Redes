@@ -84,7 +84,7 @@
               if ($numCNX != null){
                 for ($i=0; $i<$numCNX; $i++){
                   //Muestra cada Red Social que tiene registrada
-                  $red = "SELECT conexion.`LINK-PERFIL`, redes.NOMBRE  FROM conexion INNER JOIN redes WHERE `ID-RED`= '$perfilUser[0]' ORDER BY `ID-USUARIO` ASC LIMIT ".$i.", 1";
+                  $red = "SELECT conexion.`LINK-PERFIL`, redes.NOMBRE  FROM conexion INNER JOIN redes WHERE `ID-RED`= '$perfilUser[0]' ORDER BY `ID-RED` ASC LIMIT ".$i.", 1";
                   echo $red;
                   if ($resultado = $conexion -> query($red)){
                     $valores = $resultado ->fetch_array();
