@@ -62,6 +62,7 @@
                 </div>
               </div>
             </div>
+            </div>
             <div class="demo-separator mdl-cell--1-col"></div>
             <div class="mdl-shadow--4dp mdl-cell mdl-cell--4-col mdl-cell--12-col mdl-color--white">
               <div class="mdl-grid"><center>
