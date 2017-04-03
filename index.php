@@ -45,7 +45,7 @@
                 <h2 class="mdl-card__title-text">Central Redes Sociales #<?php echo $_SESSION['ID']?></h2>
               </div>
               <div class="mdl-card__supporting-text mdl-color-text--grey-600">
-                  En esta web puedes entrar a todas las redes sociales que tienen tus amigos.
+                  En esta web puedes ver todas las redes sociales que tienen tus amigos.
               </div>
               <div class="mdl-card__actions mdl-card--border">
                 <a href="contruccion.php" class="mdl-button mdl-js-button mdl-js-ripple-effect">Investigar mas</a>
