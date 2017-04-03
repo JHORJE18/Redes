@@ -150,7 +150,6 @@ if(isset($_POST["registrar"])){
       } else {
         $mensaje = "La contraseña para registrarse no coincide";
       }
-    }
 ?>
 
     <div class="mdl-grid">
