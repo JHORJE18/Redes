@@ -60,7 +60,7 @@
                 $result= $conexion -> query($sql);
 
                     if($result){
-                        $mensaje = $mensaje."La Red ha sido cambiado correctamente <br>".$sqp.'<br>';
+                        $mensaje = $mensaje."La Red ha sido cambiado correctamente <br>";
                     }   else {
                         $mensaje = $mensaje."La Red no se ha podido cambiar correctamente <br>";
                     }
