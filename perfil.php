@@ -20,7 +20,6 @@
 
     //Obten datos usuario
             $consuta = ("SELECT * FROM  `usuario` WHERE  `ID` =  '$usuarioVER'");
-            echo $consuta;
             $resultado = $conexion -> query($consuta);
 
                 $perfilUser = $resultado->fetch_array();
@@ -30,7 +29,7 @@
               }
 
         //Generamos nombre completo
-        $usuarioCOMPLETO = $perfilUser[1].', '.$perfilUser[2];
+        $usuarioCOMPLETO = $perfilUser[1].' '.$perfilUser[2];
           $seccion = $usuarioCOMPLETO;
     ?>
 
@@ -71,7 +70,7 @@
 
               <h3>Nombre: <?php echo $perfilUser[1] ?></h3>
               <h3>Apedillos: <?php echo $perfilUser[2] ?></h3>
-              <h3>Correo: <?php echo $perfilUser[2] ?></h3>
+              <h3>Correo: <?php echo $perfilUser[3] ?></h3>
               <h3>Fecha registro: <?php echo $perfilUser[6] ?></h3>
 
          <?php   }

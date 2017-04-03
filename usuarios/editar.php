@@ -82,11 +82,11 @@
     </div>
     <br>
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-        <input name="nombre" class="mdl-textfield__input" type="text" id="nombre" value="<?php echo $perfilUser[2] ?>">
+        <input name="nombre" class="mdl-textfield__input" type="text" id="nombre" value="<?php echo $perfilUser[1] ?>">
         <label class="mdl-textfield__label" for="nombre">Nombre</label>
     </div>
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-        <input name="apedillo" class="mdl-textfield__input" type="text" id="apedillo" value="<?php echo $perfilUser[3] ?>">
+        <input name="apedillo" class="mdl-textfield__input" type="text" id="apedillo" value="<?php echo $perfilUser[2] ?>">
         <label class="mdl-textfield__label" for="apedillo">Apedillos</label>
     </div>
     <br>
