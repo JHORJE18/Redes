@@ -218,22 +218,18 @@ if (substr_count($linkVideoFORMATEADO, "&") != 0){
                 <hr>
               <form action="usuarios.php" method="post" class="registro">
 
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-textfield--floating-label">
-                    <input name="usuario" class="mdl-textfield__input" type="text" id="usuario">
-                    <label class="mdl-textfield__label" for="usuario">Usuario</label>
-                </div>
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-textfield--floating-label">
+               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-textfield--floating-label">
                       <input name="email" class="mdl-textfield__input" type="email" id="email">
                       <label class="mdl-textfield__label" for="password">Correo electronico</label>
                 </div>
                 <br>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-textfield--floating-label">
-                    <input name="link" class="mdl-textfield__input" type="text" id="link">
-                    <label class="mdl-textfield__label" for="link">Link al canal</label>
+                    <input name="nombre" class="mdl-textfield__input" type="text" id="nombre">
+                    <label class="mdl-textfield__label" for="nombre">Nombre</label>
                 </div>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-textfield--floating-label">
-                    <input name="video" class="mdl-textfield__input" type="text" id="video">
-                    <label class="mdl-textfield__label" for="video">Un video del canal</label>
+                    <input name="apedillos" class="mdl-textfield__input" type="text" id="apedillos">
+                    <label class="mdl-textfield__label" for="apedillos">Apedillos</label>
                 </div>
                 <br>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-textfield--floating-label">
