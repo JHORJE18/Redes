@@ -122,12 +122,11 @@
             }
             ?>
         </div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input name="link" class="mdl-textfield__input" type="text" id="link">
+                <label class="mdl-textfield__label" for="link">Link Perfil</label>
+            </div>
       </div>
-
-    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-        <input name="link" class="mdl-textfield__input" type="text" id="link">
-        <label class="mdl-textfield__label" for="link">Link Perfil</label>
-    </div>
     <hr>
     <div>
         <input type="submit" name="editar" value="editar" id="editar" class="mdl-button mdl-js-button mdl-button--colored">
