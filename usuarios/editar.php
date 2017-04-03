@@ -64,27 +64,6 @@
         }
 
     }
-
-    //Vamos a obtener las redes sociales
-    //Obten redes sociales
-            $sql = ("SELECT * FROM  `redes_sociales` WHERE  `ID_USUARIO` =  '$perfilUser[0]'");
-            $resultado = $conexion -> query($sql);
-
-                $red = $resultado->fetch_array();
-                $cont = $resultado->num_rows;
-
-            if (cont != 0){
-                echo 'No esta vacio el red'.$cont;
-            }   else {
-                $sql = "INSERT INTO `redes_sociales` (`ID_USUARIO`) VALUES ('$perfilUser[0]');";
-                $resultado = $conexion -> query($sql);
-
-                if ($resultado){
-                    echo 'Se ha creado las posiblidad para añadir redes sociales';
-                }   else {
-                    echo 'No puedo crearte la tabla para redes sociales';
-                }
-            }
 ?>
 
 <?php
