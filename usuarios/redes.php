@@ -14,7 +14,7 @@
 
                   if ($resultado = $conexion -> query($red)){
                     $valores = $resultado -> fetch_array();
-                    echo '<a href="'.$valores[0].'" target="_blank"><div class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect"><i class="material-icons">arrow_forward</i> '.$valores[1].'/div></a>';
+                    echo '<a href="'.$valores[0].'" target="_blank"><div class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect"><i class="material-icons">arrow_forward</i> '.$valores[1].'</div></a>';
                   }
                 }
               } else {
