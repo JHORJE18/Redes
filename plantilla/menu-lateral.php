@@ -29,7 +29,7 @@ include 'conexion.php';
   <header class="demo-drawer-header">
     <img src="<?php echo $imagenUsuario; ?>" class="demo-avatar">
     <div class="demo-avatar-dropdown">
-      <span style="font-size: 18px"><?php echo $_SESSION['ID'] ?>@<?php echo $nombre; ?> <?php echo $apedillo; ?></span>
+      <span style="font-size: 18px">@<?php echo $nombre; ?>, <?php echo $apedillo; ?></span>
       <div class="mdl-layout-spacer"></div>
       <button id="opcionesBA" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-button--accent">
         <i class="material-icons" role="presentation">arrow_drop_down</i>
@@ -38,7 +38,7 @@ include 'conexion.php';
       <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="opcionesBA">
           <?php
                 //Si tiene sesion abierta, muestra cerrar sesion, sino Registrarse / Iniciar sesion
-              if(isset($_SESSION['usuario'])){
+              if(isset($_SESSION['ID'])){
                   echo '<li class="mdl-menu__item"><a href="logout.php" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
                         <i class="material-icons">close</i> Cerrar Sesión</a></li>';
               }   else    {

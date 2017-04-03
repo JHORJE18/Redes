@@ -23,7 +23,7 @@
 
       <?php
           //Si tiene sesion abierta, muestra cerrar sesion, sino Registrarse / Iniciar sesion
-        if(isset($_SESSION['usuario'])){
+        if(isset($_SESSION['ID'])){
             echo '<li class="mdl-menu__item"><a href="logout.php" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
                   <i class="material-icons">close</i> Cerrar Sesión</a></li>';
         }   else    {

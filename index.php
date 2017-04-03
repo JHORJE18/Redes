@@ -5,8 +5,8 @@
           include 'conexion.php';
 
           //Cual es el usuario actual?
-          if ($_SESSION['usuario'] != null){
-            $sesion = $_SESSION['usuario'];
+          if ($_SESSION['ID'] != null){
+            $sesion = $_SESSION['ID'];
           } else {
             $sesion = "Invitado";
           }

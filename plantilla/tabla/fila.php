@@ -11,7 +11,7 @@
                 }
 
             //Comprueba si estas suscrito
-            $sesion = $_SESSION['usuario'];
+            $sesion = $_SESSION['ID'];
             $suscritoYA = "SELECT * FROM `subscripcion` WHERE `USER-SUB` = '$sesion' AND `USER-USER` = '$canalID'";
                 if ($resultado = $conexion -> query($suscritoYA)){
                 //Determinamos numero tablas
