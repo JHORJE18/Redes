@@ -21,8 +21,4 @@
                 echo '<span>Este usuario aún no ha registrado ninguna Red Social :(</span>';
               }
             ?> 
-<?php
-        }
-
-    ?>
 </div>
