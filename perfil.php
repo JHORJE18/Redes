@@ -80,7 +80,7 @@
               if ($resultado = $conexion -> query($cuantasCNX)){
                 $numCNX = $resultado -> num_rows;
               }
-
+              echo 'consulta: '.$cuantasCNX.'<br>Num: '.$numCNX;
               if ($numCNX != null){
                 for ($i=0; $i<$numCNX; $i++){
                   //Muestra cada Red Social que tiene registrada
