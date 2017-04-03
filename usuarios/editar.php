@@ -53,6 +53,7 @@
             $idRED = $_REQUEST['red'];
             $link = $_REQUEST['link'];
 
+            echo 'Se ha obtenido la red '.$idRED;
             if ($link != null){
                 $sql = "UPDATE conexion SET `LINK-PERFIL` = '$link' WHERE `ID-RED`= '$idRED' AND `ID-USUARIO`= '$perfilUser[0]'";
             } else {
