@@ -48,18 +48,15 @@
             }
         }
 
-        //Facebook
-        if ($_REQUEST['facebook']){
-            $facebook = $_REQUEST['facebook'];
-            $sql = "UPDATE `redes_sociales` SET `FACEBOOK` = '$facebook' WHERE `ID_USUARIO` = '$perfilUser[0]'";
+        //Red Social
+        if ($_REQUEST['red'] != null){
+            $idRED = $_REQUEST['red'];
+            $link = $_REQUEST['link'];
 
-            //Introducir datos en BBDD
-           $result= $conexion -> query($sql);
-
-            if($result){
-                $mensaje = $mensaje."Facebook ha sido cambiado correctamente <br>";
-            }   else {
-                $mensaje = $mensaje."Facebook no se ha podido cambiar correctamente <br>";
+            if ($link != null){
+                $sql = "UPDATE conexion SET `LINK-PERFIL` = '$link' WHERE `ID-RED`= '$idRED' AND `ID-USUARIO`= '$perfilUser[0]'";
+            } else {
+                $mensaje = $mensaje."No se ha introducido el link de la Red Social que quieres cambiar <br>";
             }
         }
 
@@ -114,8 +111,8 @@
                     $redID = $resultadoRED->fetch_array(); 
                 }
                     echo '<div class="mdl-cell mdl-cell--4-col">
-                            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tipo'.$i.'">
-                                <input type="radio" id="tipo'.$i.'" class="mdl-radio__button" name="tipo" value="'.$redID[0].'">
+                            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="red'.$i.'">
+                                <input type="radio" id="red'.$i.'" class="mdl-radio__button" name="red" value="'.$redID[0].'">
                                 <span class="mdl-radio__label">'.$redID[1].'</span>
                             </label>
                         </div>';
