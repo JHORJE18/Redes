@@ -108,17 +108,14 @@
             if ($resultado = $conexion -> query($total)){
                 $totalREDES = $resultado -> num_rows;
             }
-            echo $totalREDES;
             for ($i=0; $i<$totalREDES; $i++){
                 $consultaRED = "SELECT * FROM `redes` ORDER BY `ID-RED` ASC LIMIT ".$i.", 1";
                 if ($resultadoRED = $conexion -> query($consultaRED)){
                     $redID = $resultadoRED->fetch_array(); 
                 }
-                echo $consultaRED.'<br>';
-                echo $redID[1];
                     echo '<div class="mdl-cell mdl-cell--4-col">
-                            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tipo1">
-                                <input type="radio" id="tipo1" class="mdl-radio__button" name="tipo" value="'.$redID[0].'">
+                            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tipo'.$i.'">
+                                <input type="radio" id="tipo'.$i.'" class="mdl-radio__button" name="tipo" value="'.$redID[0].'">
                                 <span class="mdl-radio__label">'.$redID[1].'</span>
                             </label>
                         </div>';
