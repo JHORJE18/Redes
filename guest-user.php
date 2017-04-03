@@ -145,7 +145,7 @@ if(isset($_POST["registrar"])){
     <div class="mdl-grid">
 
        <?php if ($mensaje) {
-          echo ('<div class="mdl-cell mdl-cell--12-col mdl-shadow--4dp "><center>');
+          echo ('<div class="mdl-cell mdl-cell--12-col mdl-shadow--4dp mdl-button mdl-button--raised mdl-button--accent"><center>');
           echo $mensaje;
           echo ('</center></div>');
         }   
