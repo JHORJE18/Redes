@@ -106,7 +106,7 @@
             <h3>Redes Sociales</h3>
             <?php
                 //Obten numero de redes sociales actuales
-                $sql = "SELECT * FROM conexiones WHERE `ID-USUARIO`= '$perfilUser[0]'";
+                $sql = "SELECT * FROM conexion WHERE `ID-USUARIO`= '$perfilUser[0]'";
                 echo $sql;
                 if ($resultado = $conexion -> query($sql)){
                     $numREDES = $resultado -> num_rows;
