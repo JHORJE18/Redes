@@ -66,11 +66,8 @@
     <div class="mdl-cell mdl-cell--12-col mdl-shadow--4dp mdl-color--white">
         <?php
     if ($busca != null){
-              //Principio de la tabla
-              include './plantilla/tabla/cabezera.php';
-
          //Sentencia SQL
-        $criterio = "ORDER BY USUARIO ASC";
+        $criterio = "ORDER BY NOMBRE ASC";
         $maxREG = $inicio + $TAMANO_PAGINA;
         while ($inicio < $maxREG){
               $consulta = "SELECT * FROM usuario WHERE CONCAT( NOMBRE, \" \", APEDILLOS, \" \", CORREO) LIKE '%$valor%' ".$criterio." limit ".$inicio.",".$TAMANO_PAGINA;
@@ -82,8 +79,6 @@
               }
               $inicio++;
         }
-              //Fin de la tabla
-              include './plantilla/tabla/fin.php';
     } else {
       echo '<center><h1>Oye tu, que yo sepa, no estas buscando nada :/</h1></center>';
     }
