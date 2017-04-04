@@ -14,7 +14,7 @@
             if($result){
                 $mensaje = $mensaje."El nombre ha sido cambiado correctamente <br>";
             }   else {
-                $mensaje = $mensaje."El nombre no se ha podido cambiar correctamente <br>";
+                $mensaje = $mensaje."El nombre no se ha podido cambiar correctamente <br>".$sql.'<br>';
             }
         }
 
@@ -29,7 +29,7 @@
             if($result){
                 $mensaje = $mensaje."El apedillo ha sido cambiado correctamente <br>";
             }   else {
-                $mensaje = $mensaje."El apedillo no se ha podido cambiar correctamente <br>";
+                $mensaje = $mensaje."El apedillo no se ha podido cambiar correctamente <br>".$sql.'<br>';
             }
         }
 
@@ -44,7 +44,7 @@
             if($result){
                 $mensaje = $mensaje."La foto ha sido cambiado correctamente <br>";
             }   else {
-                $mensaje = $mensaje."La foto no se ha podido cambiar correctamente <br>";
+                $mensaje = $mensaje."La foto no se ha podido cambiar correctamente <br>".$sql.'<br>';
             }
         }
 
@@ -62,7 +62,7 @@
                     if($result){
                         $mensaje = $mensaje."La Red ha sido cambiado correctamente <br>";
                     }   else {
-                        $mensaje = $mensaje."La Red no se ha podido cambiar correctamente <br>";
+                        $mensaje = $mensaje."La Red no se ha podido cambiar correctamente <br>".$sql.'<br>';
                     }
             } else {
                 $mensaje = $mensaje."No se ha introducido el link de la Red Social que quieres cambiar <br>";
