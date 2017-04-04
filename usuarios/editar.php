@@ -101,7 +101,16 @@
         <label class="mdl-textfield__label" for="foto">Foto perfil</label>
     </div>
     <hr>
-
+      <div class="mdl-cell mdl-cell--12-col">
+        <div class="mdl-grid">
+            <h3>Redes Sociales</h3>
+            <?php
+                //Obten numero de redes sociales actuales
+                $sql = "SELECT conexion.`LINK-PERFIL`, redes.NOMBRE  FROM conexion INNER JOIN redes WHERE `ID-USUARIO`= '$perfilUser[0]' ORDER BY `ID-USUARIO` ASC LIMIT ".$i.", 1";
+                echo $sql;
+            ?>
+        </div>
+      </div>
       <div class="mdl-cell mdl-cell--12-col">
         <div class="mdl-grid">
             <div class="mdl-cell mdl-cell--12-col mdl-button mdl-js-button mdl-button--raised">
