@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="es">
   <head>
-    <?php include './Plantilla/cabezera.php';
+    <?php include './plantilla/cabezera.php';
     $seccion = "Zona en construcción"?>
 
     <title>Central Redes Sociales | Zona en construcción</title>
@@ -9,8 +9,8 @@
   <body>
     <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
       <?php
-        include './Plantilla/cabezera-body.php';
-        include './Plantilla/menu-lateral.php';
+        include './plantilla/cabezera-body.php';
+        include './plantilla/menu-lateral.php';
        ?>
       <main class="mdl-layout__content mdl-color--grey-100">
 
