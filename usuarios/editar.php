@@ -106,8 +106,26 @@
             <h3>Redes Sociales</h3>
             <?php
                 //Obten numero de redes sociales actuales
-                $sql = "SELECT conexion.`LINK-PERFIL`, redes.NOMBRE  FROM conexion INNER JOIN redes WHERE `ID-USUARIO`= '$perfilUser[0]' ORDER BY `ID-USUARIO` ASC LIMIT ".$i.", 1";
-                echo $sql;
+                $sql = "SELECT conexion.`LINK-PERFIL`, redes.NOMBRE  FROM conexion INNER JOIN redes WHERE `ID-USUARIO`= '$perfilUser[0]' ORDER BY `ID-USUARIO` ASC";
+                if ($resultado = $conexion -> query($sql)){
+                    $numREDES = $resultado -> num_rows;
+                }
+
+                if ($numREDES != null){
+                    //Tiene redes sociales
+                    for ($i=0; $i<$numREDES; $i++){
+                        $sql = "SELECT conexion.`LINK-PERFIL`, redes.NOMBRE  FROM conexion INNER JOIN redes WHERE `ID-USUARIO`= '$perfilUser[0]' ORDER BY `ID-USUARIO` ASC LIMIT ".$i.", 1";
+                        $resultado = $conexion -> query($sql);
+                        $valoresREDES = $resultado ->fetch_array();
+
+                        //Redes para editar
+                        echo '<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input name="red'.$valoresREDES[0].'" class="mdl-textfield__input" type="text" id="red'.$valoresREDES[0].'" value="red'.$valoresREDES[1].'">
+                                '.$sql.'
+                                <label class="mdl-textfield__label" for="red'.$valoresREDES[0].'">red'.$valoresREDES[1].'</label>
+                            </div>';
+                    }
+                }
             ?>
         </div>
       </div>
