@@ -60,7 +60,7 @@
                 if ($resultado = $conexion -> query($check)){
                     $existe = $resultado -> num_rows;
                 }
-                if ($existe = null){
+                if ($existe = 0){
                     $sql = "INSERT INTO conexion (`ID-RED`, `ID-USUARIO`, `LINK-PERFIL`, `FECHA`)  VALUES('$idRED', '$perfilUser[0]', '$linkPERFIL', '$fecha')";
 
                     //Introducir datos en BBDD
