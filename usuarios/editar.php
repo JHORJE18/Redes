@@ -6,7 +6,7 @@
         //Cambiar nombre
         if ($_REQUEST['nombre']){
             $nombre = $_REQUEST['nombre'];
-            $sql = "UPDATE `usuarios` SET `NOMBRE` = '$nombre' WHERE `usuario`.`ID` = '$perfilUser[0]'";
+            $sql = "UPDATE `usuario` SET `NOMBRE` = '$nombre' WHERE `usuario`.`ID` = '$perfilUser[0]'";
 
             //Introducir datos en BBDD
            $result= $conexion -> query($sql);
@@ -21,7 +21,7 @@
         //Cambiar apedillo
         if ($_REQUEST['apedillo']){
             $apedillo = $_REQUEST['apedillo'];
-            $sql = "UPDATE `usuarios` SET `APEDILLOS` = '$apedillo' WHERE `usuario`.`ID` = '$perfilUser[0]'";
+            $sql = "UPDATE `usuario` SET `APEDILLOS` = '$apedillo' WHERE `usuario`.`ID` = '$perfilUser[0]'";
 
             //Introducir datos en BBDD
            $result= $conexion -> query($sql);
@@ -36,7 +36,7 @@
         //Cambiar foto
         if ($_REQUEST['foto']){
             $foto = $_REQUEST['foto'];
-            $sql = "UPDATE `usuarios` SET `FOTO` = '$foto' WHERE `usuario`.`ID` = '$perfilUser[0]'";
+            $sql = "UPDATE `usuario` SET `FOTO` = '$foto' WHERE `usuario`.`ID` = '$perfilUser[0]'";
 
             //Introducir datos en BBDD
            $result= $conexion -> query($sql);
