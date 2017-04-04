@@ -52,18 +52,28 @@
         if ($_REQUEST['red']){
             $idRED = $_REQUEST['red'];
             $link = $_REQUEST['link'];
+            $fecha = date("Y-m-d");
 
             if ($link != null){
-                $sql = "UPDATE conexion SET `LINK-PERFIL` = '$link' WHERE `ID-RED`= '$idRED' AND `ID-USUARIO`= '$perfilUser[0]'";
+                //Comprobamos que no tiene esa Red
+                $check = "SELECT * FROM conexion WHERE `ID-RED`= '$idRED' AND `ID-USUARIO` = '$perfilUser[0]'";
+                if ($resultado = $conexion -> query($check)){
+                    $existe = $resultado -> num_rows;
+                }
+                if ($resultado = null){
+                    $sql = "INSERT INTO conexion (`ID-RED`, `ID-USUARIO`, `LINK-PERFIL`, `FECHA`)  VALUES('$idRED', '$perfilUser[0]', '$linkPERFIL', '$fecha')";
 
-                //Introducir datos en BBDD
-                $result= $conexion -> query($sql);
+                    //Introducir datos en BBDD
+                    $result= $conexion -> query($sql);
 
-                    if($result){
-                        $mensaje = $mensaje."La Red ha sido cambiado correctamente <br>";
-                    }   else {
-                        $mensaje = $mensaje."La Red no se ha podido cambiar correctamente <br>".$sql.'<br>';
-                    }
+                        if($result){
+                            $mensaje = $mensaje."La Red ha sido cambiado correctamente <br>";
+                        }   else {
+                            $mensaje = $mensaje."La Red no se ha podido cambiar correctamente <br>".$sql.'<br>';
+                        }
+                } else {
+                    $mensaje = $mensaje."La red social que intentas añadir, ya existe";
+                }
             } else {
                 $mensaje = $mensaje."No se ha introducido el link de la Red Social que quieres cambiar <br>";
             }
@@ -118,8 +128,8 @@
 
                         //Redes para editar
                         echo '<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input name="red'.$valoresREDES[0].'" class="mdl-textfield__input" type="text" id="red'.$valoresREDES[0].'" value="'.$valoresREDES[1].'">
-                                <label class="mdl-textfield__label" for="red'.$valoresREDES[0].'">'.$valoresREDES[2].'</label>
+                                <input name="editRED'.$valoresREDES[0].'" class="mdl-textfield__input" type="text" id="editRED'.$valoresREDES[0].'" value="'.$valoresREDES[1].'">
+                                <label class="mdl-textfield__label" for="editRED'.$valoresREDES[0].'">'.$valoresREDES[2].'</label>
                             </div>';
                     }
                 }
