@@ -107,7 +107,6 @@
             <?php
                 //Obten numero de redes sociales actuales
                 $sql = "SELECT * FROM conexion WHERE `ID-USUARIO`= '$perfilUser[0]'";
-                echo $sql;
                 if ($resultado = $conexion -> query($sql)){
                     $numREDES = $resultado -> num_rows;
                 }
@@ -122,7 +121,7 @@
                         //Redes para editar
                         echo '<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                 <input name="red'.$valoresREDES[0].'" class="mdl-textfield__input" type="text" id="red'.$valoresREDES[0].'" value="'.$valoresREDES[1].'">
-                                <label class="mdl-textfield__label" for="red'.$valoresREDES[0].'">red'.$valoresREDES[2].'</label>
+                                <label class="mdl-textfield__label" for="red'.$valoresREDES[0].'">'.$valoresREDES[2].'</label>
                             </div>';
                     }
                 }
