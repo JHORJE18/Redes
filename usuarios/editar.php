@@ -61,7 +61,7 @@
                     $existe = $resultado -> num_rows;
                 }
                 if ($resultado != null){
-                    $mensaje = $mensaje."La red social que intentas añadir, ya existe";
+                    $mensaje = $mensaje."La red social que intentas añadir, ya existe ".$check.'<br>';
                 } else {
                     $sql = "INSERT INTO conexion (`ID-RED`, `ID-USUARIO`, `LINK-PERFIL`, `FECHA`)  VALUES('$idRED', '$perfilUser[0]', '$linkPERFIL', '$fecha')";
 
