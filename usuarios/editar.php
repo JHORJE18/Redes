@@ -107,6 +107,7 @@
             <?php
                 //Obten numero de redes sociales actuales
                 $sql = "SELECT conexion.`LINK-PERFIL`, redes.NOMBRE  FROM conexion INNER JOIN redes WHERE `ID-USUARIO`= '$perfilUser[0]' ORDER BY `ID-USUARIO` ASC";
+                echo $sql;
                 if ($resultado = $conexion -> query($sql)){
                     $numREDES = $resultado -> num_rows;
                 }
