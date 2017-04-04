@@ -74,7 +74,7 @@
                 } else {
                         $mensaje = $mensaje."La red social que intentas añadir, ya existe <br>";
                 }
-                echo $existe;
+                echo $check;
             } else {
                 $mensaje = $mensaje."No se ha introducido el link de la Red Social que quieres cambiar <br>";
             }
