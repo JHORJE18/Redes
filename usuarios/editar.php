@@ -61,8 +61,6 @@
                     $existe = $resultado -> num_rows;
                 }
                 if ($resultado != null){
-                    $mensaje = $mensaje."La red social que intentas añadir, ya existe ".$check.'<br>';
-                } else {
                     $sql = "INSERT INTO conexion (`ID-RED`, `ID-USUARIO`, `LINK-PERFIL`, `FECHA`)  VALUES('$idRED', '$perfilUser[0]', '$linkPERFIL', '$fecha')";
 
                     //Introducir datos en BBDD
@@ -73,6 +71,8 @@
                         }   else {
                             $mensaje = $mensaje."La Red no se ha podido cambiar correctamente <br>".$sql.'<br>';
                         }
+                } else {
+                        $mensaje = $mensaje."La red social que intentas añadir, ya existe ".$check.'<br>';
                 }
             } else {
                 $mensaje = $mensaje."No se ha introducido el link de la Red Social que quieres cambiar <br>";
