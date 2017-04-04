@@ -101,8 +101,6 @@
         <label class="mdl-textfield__label" for="foto">Foto perfil</label>
     </div>
     <hr>
-      <div class="mdl-cell mdl-cell--12-col">
-        <div class="mdl-grid">
             <h3>Redes Sociales</h3>
             <?php
                 //Obten numero de redes sociales actuales
@@ -126,8 +124,7 @@
                     }
                 }
             ?>
-        </div>
-      </div>
+            
       <div class="mdl-cell mdl-cell--12-col">
         <div class="mdl-grid">
             <div class="mdl-cell mdl-cell--12-col mdl-button mdl-js-button mdl-button--raised">
