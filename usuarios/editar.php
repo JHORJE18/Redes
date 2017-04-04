@@ -133,13 +133,13 @@
                                 <input type="radio" id="redO" class="mdl-radio__button" name="red" value="otro">
                                 <span class="mdl-radio__label">Otro</span>
                             </label>
-                        </div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             <input name="otro" class="mdl-textfield__input" type="text" id="otro">
                             <label class="mdl-textfield__label" for="otro">Otra Red Social</label>
                         </div>
+                        </div>
                         <br>
-            <div class="mdl-shadow--4dp mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                 <input name="link" class="mdl-textfield__input" type="text" id="link">
                 <label class="mdl-textfield__label" for="link">Link Perfil</label>
             </div>
