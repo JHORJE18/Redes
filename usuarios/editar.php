@@ -105,7 +105,7 @@
       <div class="mdl-cell mdl-cell--12-col">
         <div class="mdl-grid">
             <div class="mdl-cell mdl-cell--12-col mdl-button mdl-js-button mdl-button--raised">
-              <i class="material-icons">bookmark</i> Redes Sociales
+              <i class="material-icons">add</i> Añadir una red social
             </div>
             <?php
 
@@ -127,6 +127,11 @@
                         </div>';
             }
             ?>
+                        <!--Otra red social-->
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input name="otro" class="mdl-textfield__input" type="text" id="otro">
+                            <label class="mdl-textfield__label" for="otro">Otra red social</label>
+                        </div>
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                 <input name="link" class="mdl-textfield__input" type="text" id="link">
                 <label class="mdl-textfield__label" for="link">Link Perfil</label>
