@@ -63,7 +63,7 @@
                 if ($existe != null){
                     $mensaje = $mensaje."La red social que intentas añadir, ya existe <br>";
                 } else {
-                    $sql = "INSERT INTO conexion (`ID-RED`, `ID-USUARIO`, `LINK-PERFIL`, `FECHA`)  VALUES('$idRED', '$perfilUser[0]', '$linkPERFIL', '$fecha')";
+                    $sql = "INSERT INTO conexion (`ID-RED`, `ID-USUARIO`, `LINK-PERFIL`, `FECHA`)  VALUES('$idRED', '$perfilUser[0]', '$link', '$fecha')";
 
                     //Introducir datos en BBDD
                     $result= $conexion -> query($sql);
