@@ -10,7 +10,7 @@
 
 <div class="mdl-cell mdl-cell--4-col">
     <button class="mdl-cell mdl-cell--12-col mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">Añadir caracteristicas</button>
-    <a href="asistente.php?accion=add"><div class="mdl-button mdl-js-button mdl-button--accent mdl-js-ripple-effect"><i class="material-icons">add</i>Añadir redes sociales</div></a>
+    <a href="asistente.php?accion=addRS"><div class="mdl-button mdl-js-button mdl-button--accent mdl-js-ripple-effect"><i class="material-icons">add</i>Añadir redes sociales</div></a>
 </div>
 
 <div class="mdl-cell mdl-cell--4-col">
