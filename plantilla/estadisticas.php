@@ -5,22 +5,21 @@
     $campos = "SELECT * FROM usuario";
     if ($resultado = $conexion -> query($campos)){
         //Determinamos numero tablas
-         $users = $resultado -> num_rows;
+         $nuser = $resultado -> num_rows;
     }
 
     //Consultamos numero de filas (N Conexiones)
     $campos = "SELECT * FROM conexion";
     if ($resultado = $conexion -> query($campos)){
         //Determinamos numero tablas
-         $subs = $resultado -> num_rows;
+         $nconex = $resultado -> num_rows;
     }
 
     //Consultamos numero de filas (N Redes)
     $campos = "SELECT * FROM redes";
     if ($resultado = $conexion -> query($campos)){
         //Determinamos numero tablas
-         $views = $resultado -> num_rows;
-         echo $campos;
+         $nredes = $resultado -> num_rows;
     }
 ?>
 
@@ -30,7 +29,7 @@
             <span>Usuarios:</span>
         </span>
         <span class="mdl-list__item-secondary-content">
-            <strong><?php echo $users ?></strong>
+            <strong><?php echo $nuser ?></strong>
         </span>
     </li>
     <li class="mdl-list__item">
@@ -38,7 +37,7 @@
             <span>Conexiones:</span>
         </span>
         <span class="mdl-list__item-secondary-content">
-            <strong><?php echo $views ?></strong>
+            <strong><?php echo $nconex ?></strong>
         </span>
     </li>
     <li class="mdl-list__item">
@@ -46,7 +45,7 @@
             <span>Redes sociales:</span>
         </span>
         <span class="mdl-list__item-secondary-content">
-            <strong><?php echo $subs ?></strong>
+            <strong><?php echo $nredes ?></strong>
         </span>
     </li>
 </div>
