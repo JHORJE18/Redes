@@ -7,7 +7,7 @@
     <span>El siguiente codigo es el encargado de generar la Base de Datos</span>
     <form action="#">
     <div class="mdl-textfield mdl-js-textfield">
-        <textarea class="mdl-textfield__input" type="text" rows= "10" id="sql" value="<?php include 'asistente/sql.php'; ?>"></textarea>
+        <textarea class="mdl-textfield__input" type="text" rows= "10" id="sql" value="<?php include 'asistente/sql.txt'; ?>"></textarea>
         <label class="mdl-textfield__label" for="sql">Codigo SQL</label>
     </div>
     </form>
