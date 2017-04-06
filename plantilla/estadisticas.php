@@ -20,6 +20,7 @@
     if ($resultado = $conexion -> query($campos)){
         //Determinamos numero tablas
          $views = $resultado -> num_rows;
+         echo $campos;
     }
 ?>
 
