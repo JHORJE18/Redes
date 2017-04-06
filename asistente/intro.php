@@ -1,6 +1,5 @@
 <div class="mdl-cell mdl-cell--12-col">
     <h1>Bienvenido al asistente</h1>
-    <center><img src="https://media.giphy.com/media/26xBwdIuRJiAIqHwA/giphy.gif"></center>
 </div>
 <div class="mdl-cell mdl-cell--4-col">
     <button class="mdl-cell mdl-cell--12-col mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">Instalación</button>
