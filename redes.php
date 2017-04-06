@@ -20,7 +20,7 @@
 
           <div class="mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col">
             <div class="mdl-grid">
-              <h1>Actualmente encntramos las siguientes redes sociales en la plataforma</h1>
+              <h3>Redes Sociales</h3>
               <hr>
               <?php 
                     $sql = "SELECT * FROM redes";
@@ -30,7 +30,6 @@
 
                     for ($i=0; $i<$redes; $i++){
                         $sql = "SELECT * FROM redes ORDER BY  `ID-RED` LIMIT $i , 1";
-                        echo $sql;
                         if ($resultado = $conexion->query($sql)){
                             $objeto = $resultado-> fetch_array();
                         }
