@@ -7,10 +7,10 @@
       <hr>
     </div>
 
-    <div class="mdl-cell mdl-cell--4-col mdl-shadow--4dp" style="padding: 5px;">
+    <div class="mdl-cell mdl-cell--2-col mdl-shadow--4dp" style="padding: 5px;">
       <img src="<?php echo $imagen ?>"  style="width: 100%">
     </div>
-    <div class="mdl-cell mdl-cell--4-col mdl-shadow--4dp" style="padding: 5px;background-color:blue; color:white">
+    <div class="mdl-cell mdl-cell--10-col mdl-shadow--4dp" style="padding: 5px;background-color:blue; color:white">
       <?php
         //Redes sociales
               //Mira si tiene alguna red social
@@ -33,10 +33,6 @@
                 echo '<span>Este usuario aún no ha registrado ninguna Red Social :(</span>';
               }
       ?>
-    </div>
-    <div class="mdl-cell mdl-cell--4-col">
-      <a href="pregunta.php?ID=<?php echo $id; ?>"><div class="mdl-button mdl-js-button mdl-button--accent mdl-js-ripple-effect"><i class="material-icons">arrow_forward</i> #<?php echo $id; ?></div></a>
-      <a href="construccion.php"><div class="mdl-button mdl-js-button mdl-button--accent mdl-js-ripple-effect"><i class="material-icons">bookmark_border</i> #Prueba</div></a>
     </div>
   </div>
 </div>
