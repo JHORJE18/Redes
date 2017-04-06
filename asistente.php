@@ -34,9 +34,6 @@
                     case null:
                         include 'asistente/intro.php';
                         break;
-                    default:
-                        include 'asistente/intro.php';
-                        break;
 
                     //Instalación
                     case "moverBBDD";
