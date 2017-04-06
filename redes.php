@@ -30,6 +30,7 @@
 
                     for ($i=0; $i<$redes; $i++){
                         $sql = "SELECT * FROM redes ASC LIMIT '$i' ,1";
+                        echo $sql;
                         if ($resultado = $conexion->query($sql)){
                             $objeto = $resultado-> fetch_array();
                         }
