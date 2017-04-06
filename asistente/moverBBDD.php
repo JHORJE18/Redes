@@ -23,7 +23,8 @@ include './conexion.php';
                     $mensaje = $mensaje.'> Se ha producido un error al intentar conectar con la Base de Datos <br>';
                 }   else {
                     $mensaje = $mensaje.'> Se ha podido conectar con la Base de datos <br>';
-
+                    $mensaje = $mensaje.'> Procediendo a guardar la nueva Base de Datos <br>';
+                    
                 }
 
 
