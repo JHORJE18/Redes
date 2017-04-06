@@ -12,7 +12,7 @@ include './conexion.php';
 
     //Si hay mensajes, muestralos
     if ($mensaje != null){
-        echo '<div class="mdl-cell mdl-cell--12-col mdl-button--colored">';
+        echo '<div class="mdl-cell mdl-cell--12-col">';
         echo '<span>'.$mensaje.'</span>';
         echo '</div>';
     }
