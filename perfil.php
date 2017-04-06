@@ -132,53 +132,6 @@
             </div>
           </div>
 
-          <div class="mdl-shadow--4dp mdl-cell mdl-cell--4-col mdl-cell--12-col mdl-color--white">
-            <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
-            <div class="mdl-tabs__tab-bar">
-                <a href="#panel-preguntas" class="mdl-tabs__tab is-active">Preguntas</a>
-                <a href="#panel-amigos" class="mdl-tabs__tab">Amigos</a>
-            </div>
-
-            <div class="mdl-tabs__panel is-active" id="panel-preguntas">
-              <?php
-                //Busqueda preguntas
-                  for ($i=0; $i < 5; $i++) {
-                    //Variables
-                    $fecha = "18/02/2017";
-                    $hora = "12:00";
-                    $idusuario = 1;
-                    $usuario = "JHORJE18";
-                    $id = 20;
-                    $pregunta = "¿Quien prefeririras ser de estos personajes?";
-                    $opcionA = "Ser el megaSuperHEROE Hulk, capaz de destrozar todo lo que se encuentra en su camino!!";
-                    $opcionB = "Ser un benito señor que lo sabe todo, pero no existe en este universo";
-
-                    include './Plantilla/busqueda-preguntas.php';
-                  }
-              ?>
-            </div>
-
-            <div class="mdl-tabs__panel" id="panel-amigos">
-              <?php
-                  //Busqueda usuarios
-                  for ($i=0; $i < 10; $i++) {
-                    //Variables
-                    $fecha = "18/02/2017";
-                    $hora = "12:00";
-                    $idusuario = 1;
-                    $usuario = "JHORJE18";
-                    $id = 20;
-                    $pregunta = "¿Quien prefeririras ser de estos personajes?";
-                    $opcionA = "Ser el megaSuperHEROE Hulk, capaz de destrozar todo lo que se encuentra en su camino!!";
-                    $opcionB = "Ser un benito señor que lo sabe todo, pero no existe en este universo";
-
-                    include './Plantilla/busqueda-usuarios.php';
-                  }
-              ?>
-            </div>
-          </div>
-          </div>
-
           <div class="mdl-cell mdl-cell--12-col mdl-shadow--4dp mdl-button mdl-button--raised mdl-button--colored"><center>
             Perfil: <?php echo $usuarioCOMPLETO ?>
           </center></div>
