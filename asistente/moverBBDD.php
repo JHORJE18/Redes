@@ -5,6 +5,6 @@
 
 <div class="mdl-cell mdl-cell--12-col mdl-shadow--2dp">
     <span>¿Quieres mover tu Base de datos con todos los registros?</span>
-    <a href="asistente.php?accion=moverBBDD?datos=SI"><div class="mdl-button mdl-js-button mdl-button--accent mdl-js-ripple-effect"><i class="material-icons">save</i>Mover con los registros</div></a>
-    <a href="asistente.php?accion=moverBBDD?datos=NO"><div class="mdl-button mdl-js-button mdl-button--accent mdl-js-ripple-effect"><i class="material-icons">skip_next</i>Mover sin los registros</div></a>
+    <a href="asistente.php?accion=moverBBDD&datos=SI"><div class="mdl-button mdl-js-button mdl-button--accent mdl-js-ripple-effect"><i class="material-icons">save</i>Mover con los registros</div></a>
+    <a href="asistente.php?accion=moverBBDD&datos=NO"><div class="mdl-button mdl-js-button mdl-button--accent mdl-js-ripple-effect"><i class="material-icons">skip_next</i>Mover sin los registros</div></a>
 </div>

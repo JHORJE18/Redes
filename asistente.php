@@ -34,6 +34,9 @@
                     case null:
                         include 'asistente/intro.php';
                         break;
+                    default:
+                        include 'asistente/intro.php';
+                        break;
 
                     //Instalación
                     case "moverBBDD";
@@ -50,7 +53,6 @@
                         include 'asistente/delTODO.php';
                         break;
                 }
-                    include 'asistente/intro.php';
                 ?>              
             </div>
           </div>
