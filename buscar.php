@@ -74,7 +74,13 @@
               if ($resultado = $conexion -> query($consulta)){
                     $obj = $resultado->fetch_array();          //Mete los valores en el array $fila[]
                     if ($obj != null){
-                      echo $obj[1].'<br>';
+                      //Asignamos valores
+                      $fecha = $obj[6];
+                      $nombreCompleto = $obj[1].$obj[2];
+                      $idUser = $obj[0];
+                      $imagen = $obj[5];
+
+                      include 'plantilla/busquedas.php';
                     }
               }
               $inicio++;
