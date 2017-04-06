@@ -76,7 +76,7 @@
                     if ($obj != null){
                       //Asignamos valores
                       $fecha = $obj[6];
-                      $nombreCompleto = $obj[1].$obj[2];
+                      $nombreCompleto = $obj[1].' '.$obj[2];
                       $idUser = $obj[0];
                       $imagen = $obj[5];
 
