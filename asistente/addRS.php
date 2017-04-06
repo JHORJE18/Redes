@@ -56,6 +56,10 @@
             $mensaje = $mensaje.'> No se han recibido todos los datos <br>';
         }
     }
+
+    if ($mensaje != null){
+        echo $mensaje;
+    }
 ?>
 
 <div class="mdl-cell mdl-cell--12-col">
