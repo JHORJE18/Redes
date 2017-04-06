@@ -9,7 +9,9 @@
       $usuarioVER = $_GET['user'];
     } else if ($_SESSION['ID'] != null){
       $usuarioVER = $_SESSION['ID'];
-    } 
+    } else {
+      header("Location: usuarios.php");
+    }
 
     //Si el usuario quiere editar la pagina, muestrale lo administrativo, comprobanod que sea el mismo
     if (($_GET['edit'] != null) && ($usuarioVER = $_SESSION['ID'])){
