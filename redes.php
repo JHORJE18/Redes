@@ -29,7 +29,7 @@
                     }
 
                     for ($i=0; $i<$redes; $i++){
-                        $sql = "SELECT * FROM redes ORDER BY  `ID-RED` LIMIT $I , 1";
+                        $sql = "SELECT * FROM redes ORDER BY  `ID-RED` LIMIT $i , 1";
                         echo $sql;
                         if ($resultado = $conexion->query($sql)){
                             $objeto = $resultado-> fetch_array();
