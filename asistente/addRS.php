@@ -1,4 +1,5 @@
 <div class="mdl-cell mdl-cell--12-col">
+    <a href="asistente.php"><div class="mdl-button mdl-js-button mdl-button--accent mdl-js-ripple-effect"><i class="material-icons">backspace</i> Volver</div></a>
     <h1>Añadir Redes Sociales</h1>
     <center><img src="https://media.giphy.com/media/l41YvpiA9uMWw5AMU/giphy.gif"></center>
 </div>
