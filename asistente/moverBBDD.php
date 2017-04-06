@@ -7,7 +7,7 @@
     <span>El siguiente codigo es el encargado de generar la Base de Datos</span>
     <div class="mdl-cell mdl-cell--12-col mdl-shadow--2dp">
         <p>
-            <?php include 'asistente/sql.txt' ?>
+            <?php include 'asistente/sql.sql' ?>
         </p>
     </div>
 </div>
