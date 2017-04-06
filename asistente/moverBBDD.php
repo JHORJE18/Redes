@@ -7,11 +7,11 @@
 include './conexion.php';
     //Recibimos datos para configurar Conexion.php
     if ($_POST['go'] != null){
-        $mensaje = "> Se esta recibiendo datos";
+        $mensaje = "> Se esta recibiendo datos <br>";
 
         //Comprobamos que recibimos todos los datos
         if (($_POST['server'] != null) && ($_POST['data'] != null) && ($_POST['user'] != null)){
-            $mensaje = $mensaje.'> Datos introducidos, comprobando que son válidos';
+            $mensaje = $mensaje.'> Datos introducidos, comprobando que son válidos <br>';
                 //Conexion TEMPORAL
                 $SERVER = $_POST['server'];
                 $USER = $_POST['user'];
@@ -23,7 +23,7 @@ include './conexion.php';
                     $mensaje = $mensaje.'> Se ha producido un error al intentar conectar con la Base de Datos <br>';
                 }   else {
                     $mensaje = $mensaje.'> Se ha podido conectar con la Base de datos <br>';
-                    
+
                 }
 
 
