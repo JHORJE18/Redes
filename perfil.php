@@ -115,10 +115,6 @@
                 <h2 class="mdl-card__title-text">@<?php echo $usuarioCOMPLETO ?></h2>
               </div>
               <?php include './usuarios/redes.php' ?>
-              <div class="mdl-card__actions mdl-card--border">
-                <a href="contruccion.php" class="mdl-button mdl-js-button mdl-js-ripple-effect">Añadir Amigo</a>
-                <a href="contruccion.php" class="mdl-button mdl-js-button mdl-js-ripple-effect">Eliminar Amigo</a>
-              </div>
             </div>
             <div class="demo-separator mdl-cell--1-col"></div>
             <div class="mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet mdl-cell--12-col-desktop mdl-color--white">
