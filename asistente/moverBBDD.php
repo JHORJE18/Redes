@@ -4,7 +4,11 @@
 </div>
 
 <div class="mdl-cell mdl-cell--12-col mdl-shadow--2dp">
-    <span>¿Quieres mover tu Base de datos con todos los registros?</span>
-    <a href="asistente.php?accion=moverBBDD&datos=SI"><div class="mdl-button mdl-js-button mdl-button--accent mdl-js-ripple-effect"><i class="material-icons">save</i>Mover con los registros</div></a>
-    <a href="asistente.php?accion=moverBBDD&datos=NO"><div class="mdl-button mdl-js-button mdl-button--accent mdl-js-ripple-effect"><i class="material-icons">skip_next</i>Mover sin los registros</div></a>
+    <span>El siguiente codigo es el encargado de generar la Base de Datos</span>
+    <form action="#">
+    <div class="mdl-textfield mdl-js-textfield">
+        <textarea class="mdl-textfield__input" type="text" rows= "10" id="sql" value="<?php include 'asistente/sql.php'; ?>"></textarea>
+        <label class="mdl-textfield__label" for="sql">Codigo SQL</label>
+    </div>
+    </form>
 </div>
