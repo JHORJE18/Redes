@@ -33,6 +33,31 @@
     <i class="material-icons">add</i> Añadir Red Social
 </div>
 
+<?php
+    //Entiendo que vamos a añadir una nueva Red Social
+    if ($_POST['añadir'] != null){
+        //Compruebo que tengo todos los datos
+        if (($_POST['nombre'] != null) && ($_POST['descripcion'] != null) && ($_POST['icono'] != null) && ($_POST['link'] != null)){
+            $mensaje = $mensaje.'> Los datos se han recogido <br>';
+
+            $nombre = $_POST['nombre'];
+            $descripcion = $_POST['descripcion'];
+            $icono = $_POST['icono'];
+            $link = $_POST['link'];
+
+           $sql = "INSERT INTO redes (NOMBRE, DESCRIPCION, ICONO, LINK)  VALUES('$nombre', '$descripcion', '$icono', '$link')";
+
+           if ($resultado = $conexion -> query($sql)){
+               $mensaje = $mensaje.'> Red social '.$nombre.' añadido correctamente <br>';
+           } else {
+               $mensaje = $mensaje.'> No se ha podido añador la red social <br>';
+           }
+        } else {
+            $mensaje = $mensaje.'> No se han recibido todos los datos <br>';
+        }
+    }
+?>
+
 <div class="mdl-cell mdl-cell--12-col">
     <form action="asistente.php?accion=addRS" method="post" class="mensaje">
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -52,5 +77,7 @@
             <input name="link" class="mdl-textfield__input" type="link" id="link">
             <label class="mdl-textfield__label" for="link">Enlace oficial</label>
         </div>
+
+        <div><input type="submit" name="añadir" value="Añadir" class="mdl-button mdl-js-button mdl-button--colored"></div>
     </form>
 </div>
