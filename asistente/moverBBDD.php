@@ -9,6 +9,11 @@ include './conexion.php';
     if ($_POST['go'] != null){
         $mensaje = "Se ha recibido datos";
     }
+
+    //Si hay mensajes, muestralos
+    if ($mensaje != null){
+        echo '<span>'.$mensaje.'</span>';
+    }
 ?>
 
 <div class="mdl-cell mdl-cell--8-col">
