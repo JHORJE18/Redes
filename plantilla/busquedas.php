@@ -10,7 +10,7 @@
     <div class="mdl-cell mdl-cell--2-col mdl-shadow--4dp" style="padding: 5px;">
       <img src="<?php echo $imagen ?>"  style="width: 100%">
     </div>
-    <div class="mdl-cell mdl-cell--10-col mdl-shadow--4dp" style="padding: 5px;background-color:blue; color:white">
+    <div class="mdl-cell mdl-cell--10-col mdl-shadow--4dp" style="padding: 5px;">
       <?php
         //Redes sociales
               //Mira si tiene alguna red social
