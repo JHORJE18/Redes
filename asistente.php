@@ -21,11 +21,9 @@
 
           <div class="mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-color--white">
             <div class="mdl-grid">
-              <div class="mdl-cell mdl-cell--12-col">
                 <?php 
                     include 'asistente/intro.php';
                 ?>              
-              </div>
             </div>
           </div>
 

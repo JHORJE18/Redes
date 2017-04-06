@@ -1,5 +1,7 @@
-<h1>Bienvenido al asistente</h1>
-<img src="https://media.giphy.com/media/26xBwdIuRJiAIqHwA/giphy.gif"><br>
+<div class="mdl-cell mdl-cell--12-col">
+    <h1>Bienvenido al asistente</h1>
+    <img src="https://media.giphy.com/media/26xBwdIuRJiAIqHwA/giphy.gif">
+</div>
 <div class="mdl-cell mdl-cell--4-col">
     <span>Instalación</span>
     <a href="asistente.php?accion=reinstalar"><div class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent"><i class="material-icons">restore_page</i>Reinstalar la plataforma</div></a>
