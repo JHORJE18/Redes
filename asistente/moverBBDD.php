@@ -7,7 +7,30 @@
 include './conexion.php';
     //Recibimos datos para configurar Conexion.php
     if ($_POST['go'] != null){
-        $mensaje = "Se ha recibido datos";
+        $mensaje = "> Se esta recibiendo datos";
+
+        //Comprobamos que recibimos todos los datos
+        if (($_POST['server'] != null) && ($_POST['data'] != null) && ($_POST['user'] != null)){
+            $mensaje = $mensaje.'> Datos introducidos, comprobando que son válidos';
+                //Conexion TEMPORAL
+                $SERVER = $_POST['server'];
+                $USER = $_POST['user'];
+                $PASS = $_POST['pass'];
+                $DATA = $_POST['data'];
+
+                $conecta = new mysqli($SERVER, $USER, $PASS, $DATA);
+                if ($conecta->connect_errno){
+                    $mensaje = $mensaje.'> Se ha producido un error al intentar conectar con la Base de Datos <br>';
+                }   else {
+                    $mensaje = $mensaje.'> Se ha podido conectar con la Base de datos <br>';
+                    
+                }
+
+
+        }   else {
+            //Falta algo
+            $mensaje = $mensaje.'> Faltan datos, la contraseña puede estar vacia, pero el resto de datos tienen que tener algo <br>';
+        }
     }
 
     //Si hay mensajes, muestralos
