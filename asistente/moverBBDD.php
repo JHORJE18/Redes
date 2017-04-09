@@ -27,7 +27,7 @@ include './conexion.php';
                     $mensaje = $mensaje.'> Procediendo a guardar la nueva Base de Datos <br>';
 
                     $nuevoarchivo = fopen('conexion.php', "w+");
-                    fwrite($nuevoarchivo,"<?php $conexion = new mysqli(\"mysql.hostinger.es\", \"u553129575_jolog\", \"jorgeguay\", \"u553129575_redes\"); ?>");
+                    fwrite($nuevoarchivo,"<?php \$conexion = new mysqli(\"mysql.hostinger.es\", \"u553129575_jolog\", \"jorgeguay\", \"u553129575_redes\"); ?>");
                     fclose($nuevoarchivo);
                 }
 
