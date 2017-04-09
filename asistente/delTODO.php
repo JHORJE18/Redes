@@ -43,7 +43,7 @@ include './conexion.php';
 <br>
 <spna>Esto eliminara todos los archivos de la web<br>
         Si aceptas borrar TODO, no volveras a ver esta web en la dirección actual</span>
-    
+<br>
     <a href="asistente.php?accion=delTODO&CONF=YES"><div class="mdl-button mdl-js-button mdl-button--accent mdl-js-ripple-effect"><i class="material-icons">delete_forever</i> Eliminar</div></a>
     <a href="asistente.php?accion=delTODO&CONF=NO"><div class="mdl-button mdl-js-button mdl-button--accent mdl-js-ripple-effect"><i class="material-icons">cancel</i> Cancelar</div></a>
 </div>
