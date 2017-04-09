@@ -52,8 +52,8 @@
           </center></div>
 
           <?php
-            if ($perfilUser[0] = $_SESSION['ID']){
-              echo $perfilUser[0].' '.$_SESSION['ID'];
+            if ($usuarioVER = $_SESSION['ID']){
+              echo $usuarioVER.' '.$_SESSION['ID'];
             echo '<div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
                     <a href="perfil.php?edit=1"><div class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored"><i class="material-icons">build</i>Editar Perfil</div></a>
                   </div>';
