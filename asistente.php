@@ -7,6 +7,7 @@
     if ($_SESSION['ID'] != null){
       $usuario = $_SESSION['ID'];
       $sql = "SELECT * FROM usuario WHERE `ID`= '$usuario'";
+      echo $sql;
       if ($resultado = $conexion->query($sql)){
         $objeto = $resultado->fetch_array();
       }
