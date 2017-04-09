@@ -38,6 +38,7 @@
                         if ($resultado = $conexion->query($numerito)){
                           $numero = $resultado-> num_rows;
                         }
+                        echo $numerito;
 
                         include 'plantilla/RedSocial.php';
                     }
