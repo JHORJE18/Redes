@@ -7,11 +7,11 @@
     if ($_SESSION['ID'] != null){
       $usuario = $_SESSION['ID'];
       $sql = "SELECT * FROM usuario WHERE `ID`= '$usuario'";
-      echo $sql;
       if ($resto = $conexion -> query($sql)){
+        echo 'Funciona consulta  ';
           $objeto = $resto->fetch_array(); 
       }
-      echo $objeto[7];
+      echo $objeto[6];
 
       if ($objeto[7] < 2){
         $salir = true;
