@@ -11,6 +11,7 @@
       if ($resultado = $conexion->query($sql)){
         $objeto = $resultado->fetch_array();
       }
+      echo $objeto[7];
 
       if ($objeto[7] < 2){
         $salir = true;
