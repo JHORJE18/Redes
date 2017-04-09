@@ -25,6 +25,10 @@ include './conexion.php';
                 }   else {
                     $mensaje = $mensaje.'> Se ha podido conectar con la Base de datos <br>';
                     $mensaje = $mensaje.'> Procediendo a guardar la nueva Base de Datos <br>';
+
+                    $nuevoarchivo = fopen('conexion.php', "w+");
+                    fwrite($nuevoarchivo,"<?php echo \"texto qe contiene el nuevo archivo\"; ?>");
+                    fclose($nuevoarchivo);
                 }
 
 
