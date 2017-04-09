@@ -11,7 +11,7 @@
 
     $seccion = "Asistente"?>
 
-    <title>Central Redes Sociales | $seccion</title>
+    <title>Central Redes Sociales | <?php echo $seccion ?></title>
   </head>
   <body>
     <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
