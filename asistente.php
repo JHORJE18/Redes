@@ -8,8 +8,8 @@
       $usuario = $_SESSION['ID'];
       $sql = "SELECT * FROM usuario WHERE `ID`= '$usuario'";
       echo $sql;
-      if ($resultado = $conexion->query($sql)){
-        $objeto = $resultado->fetch_array();
+      if ($resto = $conexion -> query($sql)){
+          $objeto = $resto->fetch_array(); 
       }
       echo $objeto[7];
 
