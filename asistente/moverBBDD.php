@@ -29,6 +29,7 @@ include './conexion.php';
                     $nuevoarchivo = fopen('conexion.php', "w+");
                     fwrite($nuevoarchivo,"<?php \$conexion = new mysqli(\"$SERVER\", \"$USER\", \"$PASS\", \"$DATA\"); ?>");
                     fclose($nuevoarchivo);
+                    $mensaje = $mensaje.'> Se ha escrito los datos para la nueva Base de Datos correctamente <br>';
                 }
 
 
@@ -48,7 +49,7 @@ include './conexion.php';
 
 <div class="mdl-cell mdl-cell--8-col">
     <button class="mdl-cell mdl-cell--12-col mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">Genera nueva Conexion</button>
-    <span>Tienes que generar la nueva configuración para conectar con la nueva Base de datos, rellenando este formulario</span>
+    <span>Tienes que generar la nueva configuración para conectar con la nueva Base de datos, rellenando este formulario <br>*Recuerda primero crear las tablas usando el código SQL en la nueva Base de datos</span>
     <form action="asistente.php?accion=moverBBDD" method="post" class="config">
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                 <input name="server" class="mdl-textfield__input" type="text" id="server">
