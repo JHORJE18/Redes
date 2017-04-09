@@ -9,10 +9,8 @@
       $usuario = $_SESSION['ID'];
       $sql = "SELECT * FROM usuario WHERE `ID`= '$usuario'";
       if ($resto = $conexion -> query($sql)){
-        echo 'Funciona consulta  ';
           $objeto = $resto->fetch_array(); 
       }
-      echo $objeto[6];
 
       if ($objeto[7] < 2){
         $salir = true;

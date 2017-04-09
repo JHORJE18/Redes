@@ -3,7 +3,6 @@
 </div>
 <div class="mdl-cell mdl-cell--4-col">
     <button class="mdl-cell mdl-cell--12-col mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">Instalación</button>
-    <a href="asistente.php?accion=reinstalar"><div class="mdl-button mdl-js-button mdl-button--accent mdl-js-ripple-effect"><i class="material-icons">restore_page</i>Reinstalar la plataforma</div></a>
     <a href="asistente.php?accion=moverBBDD"><div class="mdl-button mdl-js-button mdl-button--accent mdl-js-ripple-effect"><i class="material-icons">restore</i>Reinstalar la Base de datos</div></a>
 </div>
 
