@@ -26,6 +26,17 @@ include './conexion.php';
                     $mensaje = $mensaje.'> Se ha podido conectar con la Base de datos <br>';
                     $mensaje = $mensaje.'> Procediendo a guardar la nueva Base de Datos <br>';
                     
+                    unlink('conexion.php');
+                    $mensaje = $mensaje.'> Se ha borrado el fichero de conexiones <br>';
+
+                    $nuevoArchivo = fopen('conexion.php', "w+");
+                    $mensaje = $mensaje.'> Se ha creado de nuevo el fichero <br>';
+
+                    fwrite($nuevoArchivo, "<?php
+                                        // Conexion con la Base de datos 
+                                        $conexion = new mysqli(\"mysql.hostinger.es\", \"u553129575_jolog\", \"jorgeguay\", \"u553129575_redes\"); ?>");
+                    fclose($nuevoArchivo);
+                    $mensaje = $mensaje.'> Se ha escrito la nueva información en el archivo <br>';
                 }
 
 
