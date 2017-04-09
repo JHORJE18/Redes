@@ -41,7 +41,7 @@ include './conexion.php';
 <div class="mdl-cell mdl-cell--12-col">
 <h3>¿Estas seguro de que quieres eliminar TODA la plataforma?</h3>
 <br>
-<spna>Esto eliminara toda la Base de datos, las tablas, los registros, los archivos de la web<br>
+<spna>Esto eliminara todos los archivos de la web<br>
         Si aceptas borrar TODO, no volveras a ver esta web en la dirección actual</span>
     
     <a href="asistente.php?accion=delTODO&CONF=YES"><div class="mdl-button mdl-js-button mdl-button--accent mdl-js-ripple-effect"><i class="material-icons">delete_forever</i> Eliminar</div></a>
