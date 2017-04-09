@@ -3,6 +3,28 @@
   <head>
     <?php include './plantilla/cabezera.php';
 
+    //Comprueba sesion abierta & estado 2
+    if ($_SESSION['ID'] != null){
+      $usuario = $_SESSION['ID'];
+      $sql = "SELECT * FROM usuario WHERE `ID`= '$usuario'";
+      if ($resultado = $conexion->query($sql)){
+        $objeto = $resultado->fetch_array();
+      }
+
+      if ($objeto[7] < 2){
+        $salir = true;
+      } else {
+        $salir = false;
+      }
+    } else {
+      $salir = true;
+    }
+
+    //Si hay que sacar al usuario, sacalo!
+    if ($salir){
+      header("Location: usuarios.php");
+    }
+
     if ($_GET['accion'] != null){
         $accion = $_GET['accion'];
     }   else {
