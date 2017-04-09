@@ -8,21 +8,27 @@
 include './conexion.php';
     if ($_GET['CONF'] != null){
         if ($_GET['CONF'] == 'YES'){
-            //Eliminamos todo
-            function BorrarDirectorio($directorio) {
-                $archivos = scandir($directorio); //hace una lista de archivos del directorio
-                $num = count($archivos); //los cuenta
+            //Eliminamos Base de datos
+            $eliminarBBDD = "DROP DATABASE $DATA";
+            if ($resultado = $conexion ->query($eliminarBBDD)){
+                //Eliminamos archivos
+                function BorrarDirectorio($directorio) {
+                    $archivos = scandir($directorio); //hace una lista de archivos del directorio
+                    $num = count($archivos); //los cuenta
 
-                //Los borramos
-                for ($i=0; $i<=$num; $i++) {
-                    unlink ($archivos[$i]); 
-                }
+                    //Los borramos
+                    for ($i=0; $i<=$num; $i++) {
+                        unlink ($archivos[$i]); 
+                    }
 
-                //borramos el directorio
-                rmdir ($directorio);
-                }
+                    //borramos el directorio
+                    rmdir ($directorio);
+                    }
 
-            BorrarDirectorio("./");
+                BorrarDirectorio("./");
+            } else {
+                $mensaje = $mensaje.'> No se ha podido eliminar la Base de Datos, se ha cancelado todo <br>';
+            }
         }  
         if ($_GET['CONF'] == 'NO'){
             $mensaje = $mensaje.'> Menos mal que has decidido no borrar todo <br>';

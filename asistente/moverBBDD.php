@@ -27,7 +27,7 @@ include './conexion.php';
                     $mensaje = $mensaje.'> Procediendo a guardar la nueva Base de Datos <br>';
 
                     $nuevoarchivo = fopen('conexion.php', "w+");
-                    fwrite($nuevoarchivo,"<?php \$conexion = new mysqli(\"$SERVER\", \"$USER\", \"$PASS\", \"$DATA\"); ?>");
+                    fwrite($nuevoarchivo,"<?php \n\$BASE = $DATA \n \$conexion = new mysqli(\"$SERVER\", \"$USER\", \"$PASS\", \"$DATA\"); ?>");
                     fclose($nuevoarchivo);
                     $mensaje = $mensaje.'> Se ha escrito los datos para la nueva Base de Datos correctamente <br>';
                 }
