@@ -34,6 +34,11 @@
                             $objeto = $resultado-> fetch_array();
                         }
 
+                        $numerito = "SELECT * FROM redes WHERE `ID-RED`= '$objeto[0]'";
+                        if ($resultado = $conexion->query($numerito)){
+                          $numero = $resultado-> num_rows;
+                        }
+
                         include 'plantilla/RedSocial.php';
                     }
               ?>
