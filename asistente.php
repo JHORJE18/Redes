@@ -52,6 +52,15 @@
                     case "delTODO":
                         include 'asistente/delTODO.php';
                         break;
+                    case "delUSER":
+                        include 'asistente/delUSER.php';
+                        break;
+                    case "delREDES":
+                        include 'asistente/delREDES.php';
+                        break;
+                    case "delCONX":
+                        include 'asistente/delCONX.php';
+                        break;
                 }
                 ?>              
             </div>
