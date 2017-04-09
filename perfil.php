@@ -115,18 +115,6 @@
               </div>
               <?php include './usuarios/redes.php' ?>
             </div>
-            <div class="demo-separator mdl-cell--1-col"></div>
-            <div class="mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet mdl-cell--12-col-desktop mdl-color--white">
-              <div class="mdl-grid">
-                <div class="mdl-cell mdl-cell--12-col mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
-                  Estadisticas
-                </div>
-                <div class="mdl-cell mdl-cell--12-col">
-                        <?php                     
-                        include './cositas/estadisticas.php' ?>
-                </div>
-              </div>
-            </div>
           </div>
 
           <div class="mdl-cell mdl-cell--12-col mdl-shadow--4dp mdl-button mdl-button--raised mdl-button--colored"><center>
