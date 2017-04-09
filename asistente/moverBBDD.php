@@ -26,7 +26,6 @@ include './conexion.php';
                     $mensaje = $mensaje.'> Se ha podido conectar con la Base de datos <br>';
                     $mensaje = $mensaje.'> Procediendo a guardar la nueva Base de Datos <br>';
                     
-                    unlink('conexion.php');
                     $mensaje = $mensaje.'> Se ha borrado el fichero de conexiones <br>';
 
                     $nuevoArchivo = fopen('conexion.php', "w+");
