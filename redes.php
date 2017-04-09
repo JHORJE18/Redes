@@ -16,7 +16,7 @@
        ?>
       <main class="mdl-layout__content mdl-color--grey-100">
 
-        <div class="mdl-grid">
+        <div class="mdl-grid demo-content">
 
           <div class="mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col">
             <div class="mdl-grid">
