@@ -2,6 +2,7 @@
 <html lang="es">
   <head>
     <?php include './plantilla/cabezera.php';
+          include './conexion.php';
 
     //Comprueba sesion abierta & estado 2
     if ($_SESSION['ID'] != null){
