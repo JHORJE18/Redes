@@ -52,11 +52,12 @@
           </center></div>
 
           <?php
-            if ($perfilUser[0] = $_SESSION['ID']){ ?>
-            <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
-              <a href="perfil.php?edit=1"><div class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored"><i class="material-icons">build</i>Editar Perfil</div></a>
-            </div>
-          <?php } ?>
+            if ($perfilUser[0] = $_SESSION['ID']){
+              echo $perfilUser[0].' '.$_SESSION['ID'];
+            echo '<div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
+                    <a href="perfil.php?edit=1"><div class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored"><i class="material-icons">build</i>Editar Perfil</div></a>
+                  </div>';
+            } ?>
 
           <div class="mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col">
             <div class="mdl-grid">
