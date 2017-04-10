@@ -8,7 +8,7 @@
     <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="table-layout:fixed;width:100%;">
             <thead>
                 <tr>
-                    <th>ID</th>
+                    <th><center>ID</center></th>
                     <th class="mdl-data-table__cell--non-numeric">Nombre</th>
                     <th class="mdl-data-table__cell--non-numeric">Apedillos</th>
                     <th class="mdl-data-table__cell--non-numeric">Correo</th>
@@ -30,7 +30,7 @@
             }   ?>
 
             <tr>
-                <td class="mdl-data-table__cell--non-numeric">
+                <td>
                     <a href="perfil.php?user=<?php echo $objeto[0] ?>"><div class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect"><?php echo $objeto[0] ?></div></a>
                 </td>    
                 <td class="mdl-data-table__cell--non-numeric"><?php echo $objeto[1] ?></td>
