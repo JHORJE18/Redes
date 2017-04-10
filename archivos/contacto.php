@@ -51,7 +51,7 @@
         <h1>Contacta con el soporte</h1>
         <hr>
                   <?php 
-                    if ($mensaje != null){
+                    if (isset($mensaje)){
                         echo '<span>'.$mensaje.'</span><hr>';
                     }
                   ?>
