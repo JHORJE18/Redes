@@ -16,8 +16,13 @@
       <main class="mdl-layout__content mdl-color--grey-100">
 
         <div class="mdl-grid demo-content">
-          <?php include 'guest-user.php'; ?>
-
+          <?php 
+          if (isset($_SESSION['ID'])){
+            header("Location: perfil.php");
+          } else {
+            include 'guest-user.php';
+          }
+          ?>
         </div>
       </main>
     </div>
