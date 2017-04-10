@@ -1,7 +1,7 @@
 <div class="mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-color--white">
   <div class="mdl-grid">
     <div class="mdl-cell mdl-cell--12-col">
-      <span style="float:right"><?php echo $fecha; ?></span>
+      <span style="float:right"><?php echo $fecha; ?><br><?php echo $correo ?></span>
       <a href="perfil.php?user=<?php echo $idUser ?>"><div class="mdl-button mdl-js-button mdl-button--accent mdl-js-ripple-effect"><i class="material-icons">account_box</i>
       @<?php echo $nombreCompleto; ?>  </div></a>
       <hr>
