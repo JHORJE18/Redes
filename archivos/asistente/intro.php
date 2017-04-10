@@ -4,9 +4,9 @@
 
 <div class="mdl-cell mdl-cell--4-col">
     <button class="mdl-cell mdl-cell--12-col mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">Consultar Registros</button>
-    <a href="asistente.php?accion=consultUSER"><div class="mdl-button mdl-js-button mdl-button--accent mdl-js-ripple-effect"><i class="material-icons">remove_red_eye</i>Consultar Usuarios</div></a>
-    <a href="redes.php"><div class="mdl-button mdl-js-button mdl-button--accent mdl-js-ripple-effect"><i class="material-icons">remove_red_eye</i>Consultar Redes Sociales</div></a>
-    <a href="asistente.php?accion=consultCONX"><div class="mdl-button mdl-js-button mdl-button--accent mdl-js-ripple-effect"><i class="material-icons">remove_red_eye</i>Consultar Conexiones</div></a>
+    <a href="asistente.php?accion=consultUSER"><div class="mdl-button mdl-js-button mdl-button--accent mdl-js-ripple-effect"><i class="material-icons">remove_red_eye</i> Consultar Usuarios</div></a>
+    <a href="redes.php"><div class="mdl-button mdl-js-button mdl-button--accent mdl-js-ripple-effect"><i class="material-icons">remove_red_eye</i> Consultar Redes Sociales</div></a>
+    <a href="asistente.php?accion=consultCONX"><div class="mdl-button mdl-js-button mdl-button--accent mdl-js-ripple-effect"><i class="material-icons">remove_red_eye</i> Consultar Conexiones</div></a>
 </div>
 
 <div class="mdl-cell mdl-cell--4-col">
