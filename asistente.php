@@ -26,7 +26,7 @@
       header("Location: usuarios.php");
     }
 
-    if ($_GET['accion'] != null){
+    if (isset($_GET['accion'])){
         $accion = $_GET['accion'];
     }   else {
         $accion = null;

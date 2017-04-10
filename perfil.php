@@ -4,7 +4,7 @@
     <?php include './plantilla/cabezera.php';
           include './conexion.php';
 
-    if ($_GET['user'] !=  null){
+    if (isset($_GET['user'])){
       //Quiere ver a un usuario
       $usuarioVER = $_GET['user'];
     } else if ($_SESSION['ID'] != null){
@@ -14,7 +14,7 @@
     }
 
     //Si el usuario quiere editar la pagina, muestrale lo administrativo, comprobanod que sea el mismo
-    if (($_GET['edit'] != null) && ($usuarioVER = $_SESSION['ID'])){
+    if (isset($_GET['edit']) && ($usuarioVER = $_SESSION['ID'])){
       $editV = true;
     } else {
       $editV = false;

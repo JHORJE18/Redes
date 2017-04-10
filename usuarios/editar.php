@@ -1,7 +1,8 @@
 <?php
+$mensaje = null;
 
     //Vamos a editar datos
-    if ($_REQUEST['editar'] != null){
+    if (isset($_REQUEST['editar'])){
 
         //Cambiar nombre
         if ($_REQUEST['nombre']){

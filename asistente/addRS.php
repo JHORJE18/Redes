@@ -10,6 +10,7 @@
 
 <div class="mdl-cell mdl-cell--12-col">
 <?php
+$mensaje = null;
     //Muestra las redes sociales actuales
             $total = "SELECT * FROM `redes` ORDER BY `ID-RED` ASC";
             if ($resultado = $conexion -> query($total)){
@@ -36,7 +37,7 @@
 
 <?php
     //Entiendo que vamos a añadir una nueva Red Social
-    if ($_POST['añadir'] != null){
+    if (isset($_POST['añadir'])){
         //Compruebo que tengo todos los datos
         if (($_POST['nombre'] != null) && ($_POST['descripcion'] != null) && ($_POST['icono'] != null) && ($_POST['link'] != null)){
             $mensaje = $mensaje.'> Los datos se han recogido <br>';
@@ -58,7 +59,7 @@
         }
     }
 
-    if ($mensaje != null){
+    if (isset($mensaje)){
         echo $mensaje;
     }
 ?>
