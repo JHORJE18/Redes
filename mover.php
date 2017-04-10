@@ -1,31 +1,38 @@
 <?php
-    //Funcion copia todos los archivos
-    function copia_completa( $source, $target ) {  
-            if ( is_dir( $source ) ) {  
-                @mkdir( $target );  
-                $d = dir( $source );  
-                while ( FALSE !== ( $entry = $d->read() ) ) {  
-                    if ( $entry == '.' || $entry == '..' ) {  
-                        continue;  
-                    }  
-                    $Entry = $source . '/' . $entry;   
-                    if ( is_dir( $Entry ) ) {  
-                        full_copy( $Entry, $target . '/' . $entry );  
-                        continue;  
-                    }  
-                    copy( $Entry, $target . '/' . $entry );  
-                }  
-        
-                $d->close();  
-            }else {  
-                copy( $source, $target );  
-            }  
-        } 
+//Recojo el valor de donde copio y donde tengo que copiar
+function copia($dirOrigen, $dirDestino) {
+    //Creo el directorio destino
+    mkdir($dirDestino, 0777, true);
 
-        //Eliminamos ficheros ya no necesarios
+    //abro el directorio origen
 
-        //Copiamos archivos de la plataforma
-        $origen = '/archivos/';
-        $destino = './';
-        copia_completa($origen, $destino);
+    if ($vcarga = opendir($dirOrigen))
+    {
+        while($file = readdir($vcarga)) //lo recorro enterito
+        {
+            if ($file != "." && $file != "..") //quito el raiz y el padre
+            {
+                echo "<b>$file</b>"; //muestro el nombre del archivo
+                if (!is_dir($dirOrigen.$file)) //pregunto si no es directorio
+                {
+                    if(copy($dirOrigen.$file, $dirDestino.$file)) //como no es directorio, copio de origen a destino
+                    {
+                        echo " COPIADO!";
+                    }else{
+                        echo " ERROR!";
+                    }
+                }else{
+                    echo " — directorio — <br />"; //era directorio llamo a la función de nuevo con la nueva ubicación
+                    copia($dirOrigen.$file."/", $dirDestino.$file."/");
+                }
+                echo "<br />";
+            }
+        }
+        closedir($vcarga);
+    }
+}
+
+$destino = "";
+$origen = "archivos/";
+copia($origen, $destino);
 ?>
