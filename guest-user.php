@@ -114,7 +114,7 @@ if(isset($_POST["registrar"])){
                 $admin_email = "wiijlg@hotmail.com";
                 $subject = "Central Redes Sociales | Registrado";
                 $separa = "\n--------------------------------------------------\n";
-                $datos = "Ya estas registrado!\nUsuario: ".$usuario."\nCorreo: ".$correo."\nContraseña: ".$contrasena;
+                $datos = "Ya estas registrado!\nCorreo: ".$correo."\nContraseña: ".$contrasena;
 
                 $comment = $separa.$datos.$separa;
                         
@@ -146,7 +146,7 @@ if(isset($_POST["registrar"])){
 
     <div class="mdl-grid">
 
-       <?php if ($mensaje) {
+       <?php if (isset($mensaje)) {
           echo ('<div class="mdl-cell mdl-cell--12-col mdl-shadow--4dp mdl-button mdl-button--raised mdl-button--accent"><center>');
           echo $mensaje;
           echo ('</center></div>');
