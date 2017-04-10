@@ -84,6 +84,18 @@
                     case "delCONX":
                         include 'asistente/delCONX.php';
                         break;
+
+                    //Consultas
+                    case "consultUSER":
+                        include 'asistente/consultUSER.php';
+                        break;
+                    case "consultRS":
+                        include 'asistente/consultRS.php';
+                        break;
+                    case "consultCONX":
+                        include 'asistente/consultCONX.php';
+                        break;
+
                 }
                 ?>              
             </div>

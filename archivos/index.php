@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="es">
   <head>
-    <?php include './plantilla/cabezera.php';
+    <?php include 'plantilla/cabezera.php';
           include 'conexion.php';
 
           //Cual es el usuario actual?

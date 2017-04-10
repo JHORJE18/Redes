@@ -21,7 +21,11 @@
       $TAMANO_PAGINA = 10;
 
       //Examino la pagina a mostrar
-      $pagina = $_GET['pag'];
+      if (isset($_GET['pag'])){
+        $pagina = $_GET['pag'];
+      } else {
+        $pagina = null;
+      }
       if (!$pagina){
         $inicio = 0;
         $pagina = 1;

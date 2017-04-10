@@ -1,9 +1,12 @@
 <div class="mdl-cell mdl-cell--12-col">
     <h1>Bienvenido al asistente</h1>
 </div>
+
 <div class="mdl-cell mdl-cell--4-col">
-    <button class="mdl-cell mdl-cell--12-col mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">Instalación</button>
-    <a href="asistente.php?accion=moverBBDD"><div class="mdl-button mdl-js-button mdl-button--accent mdl-js-ripple-effect"><i class="material-icons">restore</i>Reinstalar la Base de datos</div></a>
+    <button class="mdl-cell mdl-cell--12-col mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">Consultar Registros</button>
+    <a href="asistente.php?accion=consultUSER"><div class="mdl-button mdl-js-button mdl-button--accent mdl-js-ripple-effect"><i class="material-icons">remove_red_eye</i>Consultar Usuarios</div></a>
+    <a href="redes.php"><div class="mdl-button mdl-js-button mdl-button--accent mdl-js-ripple-effect"><i class="material-icons">remove_red_eye</i>Consultar Redes Sociales</div></a>
+    <a href="asistente.php?accion=consultCONX"><div class="mdl-button mdl-js-button mdl-button--accent mdl-js-ripple-effect"><i class="material-icons">remove_red_eye</i>Consultar Conexiones</div></a>
 </div>
 
 <div class="mdl-cell mdl-cell--4-col">
@@ -17,4 +20,9 @@
     <a href="asistente.php?accion=delUSER"><div class="mdl-button mdl-js-button mdl-button--accent mdl-js-ripple-effect"><i class="material-icons">delete</i>Eliminar usuarios</div></a>
     <a href="asistente.php?accion=delREDES"><div class="mdl-button mdl-js-button mdl-button--accent mdl-js-ripple-effect"><i class="material-icons">delete</i>Eliminar redes sociales</div></a>
     <a href="asistente.php?accion=delCONX"><div class="mdl-button mdl-js-button mdl-button--accent mdl-js-ripple-effect"><i class="material-icons">delete</i>Eliminar conexiones</div></a>
+</div>
+
+<div class="mdl-cell mdl-cell--4-col">
+    <button class="mdl-cell mdl-cell--12-col mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">Instalación</button>
+    <a href="asistente.php?accion=moverBBDD"><div class="mdl-button mdl-js-button mdl-button--accent mdl-js-ripple-effect"><i class="material-icons">restore</i>Reinstalar la Base de datos</div></a>
 </div>
